@@ -252,14 +252,23 @@ a {
 }
 
 .has-dropdown > a::after {
-    content: " +";
-    font-size: 0.75rem;
-    color: var(--color-text-light);
-    font-style: normal;
+    content: none;
 }
 
-.has-dropdown.dropdown-open > a::after {
-    content: " −";
+.dropdown-toggle {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 0.9375rem;
+    color: var(--color-text-light);
+    cursor: pointer;
+    padding: 0;
+    margin-left: 6px;
+    transition: color 0.15s ease;
+}
+
+.dropdown-toggle:hover {
+    color: var(--color-accent);
 }
 
 .dropdown {
