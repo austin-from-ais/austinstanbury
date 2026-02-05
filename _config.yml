@@ -1,0 +1,20 @@
+title: Austin Stanbury
+url: "https://austin-from-ais.github.io"
+baseurl: "/austinstanbury"
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
