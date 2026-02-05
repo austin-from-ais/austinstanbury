@@ -3,7 +3,7 @@ title: Phoby
 short_title: Phoby
 tagline: VR application to help people overcome phobias
 year: 2019
-image: phoby.jpg
+image: phoby.png
 features:
   - Multiple phobia modules including heights and spiders
   - Graduated intensity levels for controlled exposure
