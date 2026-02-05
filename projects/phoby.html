@@ -15,7 +15,7 @@
             <ul>
                 <li><a href="../index.html">about</a></li>
                 <li class="has-dropdown">
-                    <a href="../projects.html" class="active">projects</a>
+                    <a href="../projects.html" class="active">projects</a><button class="dropdown-toggle">+</button>
                     <ul class="dropdown">
                         <li><a href="scale.html">SCALE</a></li>
                         <li><a href="bartow.html">Bartow AR Murals</a></li>
@@ -85,11 +85,13 @@
     </div>
 
     <script>
-        // Dropdown toggle on click
-        document.querySelectorAll('.has-dropdown > a').forEach(link => {
-            link.addEventListener('click', (e) => {
+        // Dropdown toggle on + button click only
+        document.querySelectorAll('.dropdown-toggle').forEach(button => {
+            button.addEventListener('click', (e) => {
                 e.preventDefault();
-                link.parentElement.classList.toggle('dropdown-open');
+                const parent = button.parentElement;
+                parent.classList.toggle('dropdown-open');
+                button.textContent = parent.classList.contains('dropdown-open') ? '−' : '+';
             });
         });
     </script>
