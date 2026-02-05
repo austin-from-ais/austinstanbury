@@ -57,6 +57,12 @@
                         {% endfor %}
                     </ul>
                     {% endif %}
+
+                    {% if page.note %}
+                    <div class="project-note">
+                        <p>{{ page.note }}</p>
+                    </div>
+                    {% endif %}
                 </div>
             </article>
         </main>
