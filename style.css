@@ -258,8 +258,7 @@ a {
     font-style: normal;
 }
 
-.has-dropdown.dropdown-open > a::after,
-.has-dropdown:hover > a::after {
+.has-dropdown.dropdown-open > a::after {
     content: " −";
 }
 
@@ -270,7 +269,7 @@ a {
     margin-top: 4px;
 }
 
-.has-dropdown:hover .dropdown {
+.has-dropdown.dropdown-open .dropdown {
     display: block;
 }
 
@@ -290,10 +289,6 @@ a {
 
 /* Mobile dropdown */
 @media (max-width: 700px) {
-    .has-dropdown:hover .dropdown {
-        display: none;
-    }
-    
     .has-dropdown.dropdown-open .dropdown {
         display: flex;
         flex-wrap: wrap;
