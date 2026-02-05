@@ -415,6 +415,21 @@ a {
     text-decoration: underline;
 }
 
+.project-note {
+    background: #f5f5f5;
+    border-left: 3px solid #ccc;
+    padding: 20px 24px;
+    margin-top: 32px;
+    font-size: 0.9375rem;
+    font-style: italic;
+    color: #555;
+    line-height: 1.7;
+}
+
+.project-note p {
+    margin: 0;
+}
+
 /* === EXPANDABLE ITEMS === */
 .expandable-list {
     list-style: none;
