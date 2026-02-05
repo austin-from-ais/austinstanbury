@@ -362,7 +362,7 @@ a {
 .project-image {
     width: 100%;
     max-width: 500px;
-    margin: 24px 0;
+    margin-top: 24px;
     background: #e0e0e0;
 }
 
