@@ -85,13 +85,11 @@
     </div>
 
     <script>
-        // Dropdown toggle for mobile
+        // Dropdown toggle on click
         document.querySelectorAll('.has-dropdown > a').forEach(link => {
             link.addEventListener('click', (e) => {
-                if (window.innerWidth <= 700) {
-                    e.preventDefault();
-                    link.parentElement.classList.toggle('dropdown-open');
-                }
+                e.preventDefault();
+                link.parentElement.classList.toggle('dropdown-open');
             });
         });
     </script>
