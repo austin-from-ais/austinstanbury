@@ -246,6 +246,158 @@ a {
     max-width: 50ch;
 }
 
+/* === DROPDOWN NAV === */
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    list-style: none;
+    padding: 8px 0 8px 12px;
+    margin-top: 4px;
+    border-left: 1px solid #e0e0e0;
+}
+
+.has-dropdown:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    margin-bottom: 4px;
+}
+
+.dropdown a {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
+}
+
+.dropdown a:hover {
+    color: var(--color-accent);
+}
+
+/* Mobile dropdown */
+@media (max-width: 700px) {
+    .has-dropdown:hover .dropdown {
+        display: none;
+    }
+    
+    .has-dropdown.dropdown-open .dropdown {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 12px;
+        padding: 8px 0 0 0;
+        border-left: none;
+        width: 100%;
+    }
+}
+
+/* === PROJECT DETAIL PAGE === */
+.project-detail {
+    max-width: 600px;
+}
+
+.project-header {
+    margin-bottom: 32px;
+}
+
+.back-link {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
+    display: inline-block;
+    margin-bottom: 24px;
+    transition: color 0.15s ease;
+}
+
+.back-link:hover {
+    color: var(--color-accent);
+}
+
+.project-detail h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.project-tagline {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    margin-bottom: 4px;
+}
+
+.project-date {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
+}
+
+.project-body p {
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+.project-body h2 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 32px;
+    margin-bottom: 12px;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 24px 0;
+    background: #e0e0e0;
+}
+
+.project-video {
+    margin: 24px 0;
+}
+
+.project-video iframe {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+.project-features {
+    list-style: none;
+    padding: 0;
+}
+
+.project-features li {
+    font-size: 0.9375rem;
+    color: var(--color-text-light);
+    margin-bottom: 8px;
+    padding-left: 16px;
+    position: relative;
+}
+
+.project-features li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: var(--color-text-light);
+}
+
+.project-links {
+    list-style: none;
+    padding: 0;
+}
+
+.project-links li {
+    margin-bottom: 8px;
+}
+
+.project-links a {
+    font-size: 0.9375rem;
+    color: var(--color-accent);
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
 /* === EXPANDABLE ITEMS === */
 .expandable-list {
     list-style: none;
