@@ -20,6 +20,10 @@
                     <h1>{{ page.title }}</h1>
                     {% if page.tagline %}<p class="project-tagline">{{ page.tagline }}</p>{% endif %}
                     <p class="project-date">{{ page.year }}</p>
+
+                    {% if page.image %}
+                    <img src="{{ site.baseurl }}/assets/images/{{ page.image }}" alt="{{ page.title }}" class="project-image">
+                    {% endif %}
                 </header>
 
                 <div class="project-body">
@@ -30,10 +34,6 @@
                     {% endif %}
 
                     {{ content }}
-
-                    {% if page.image %}
-                    <img src="{{ site.baseurl }}/assets/images/{{ page.image }}" alt="{{ page.title }}" class="project-image">
-                    {% endif %}
 
                     {% if page.video %}
                     <div class="project-video">
