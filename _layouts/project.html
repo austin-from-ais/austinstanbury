@@ -23,6 +23,12 @@
                 </header>
 
                 <div class="project-body">
+                    {% if page.note %}
+                    <div class="project-note">
+                        <p><strong>Note:</strong> {{ page.note }}</p>
+                    </div>
+                    {% endif %}
+
                     {{ content }}
 
                     {% if page.image %}
@@ -56,12 +62,6 @@
                         <li><a href="{{ link.url }}" target="_blank">{{ link.label }} →</a></li>
                         {% endfor %}
                     </ul>
-                    {% endif %}
-
-                    {% if page.note %}
-                    <div class="project-note">
-                        <p>{{ page.note }}</p>
-                    </div>
                     {% endif %}
                 </div>
             </article>
