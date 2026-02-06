@@ -1,4 +1,5 @@
 ---
+category: hackathon
 title: Fresh Match
 short_title: FreshMatch
 tagline: Connecting local growers with local restaurants
