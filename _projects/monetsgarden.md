@@ -1,4 +1,5 @@
 ---
+category: hackathon
 title: "Monet's Garden"
 short_title: "Monet's Garden"
 tagline: VR meditation and self-care experience
