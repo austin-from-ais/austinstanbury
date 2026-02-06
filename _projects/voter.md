@@ -1,4 +1,5 @@
 ---
+category: hackathon
 title: VoteR
 short_title: VoteR
 tagline: Accessible voter education through mobile VR
