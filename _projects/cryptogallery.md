@@ -1,10 +1,10 @@
 ---
 category: grad-school
-title: Sol
-short_title: Sol
+title: CryptoGallery
+short_title: CryptoGallery
 tagline: 
 year: 2021
-image: sol.png
+image: cryptogallery.png
 ---
 
 Content coming soon.
