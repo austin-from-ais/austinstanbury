@@ -1,4 +1,5 @@
 ---
+category: hackathons
 title: WonderLab
 short_title: WonderLab
 tagline: Voice-controlled VR world-building with AI
