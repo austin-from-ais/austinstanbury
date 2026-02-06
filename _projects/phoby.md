@@ -1,4 +1,5 @@
 ---
+category: hackathon
 title: Phoby
 short_title: Phoby
 tagline: VR application to help people overcome phobias
