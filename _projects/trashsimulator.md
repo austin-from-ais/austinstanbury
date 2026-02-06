@@ -1,4 +1,5 @@
 ---
+category: hackathon
 title: Trash Simulator
 short_title: TrashSimulator
 tagline: Visualize your environmental impact with AI, VR, and trash
