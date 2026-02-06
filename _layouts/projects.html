@@ -1,0 +1,91 @@
+---
+layout: default
+title: Projects
+---
+
+<h1>projects</h1>
+
+{% assign art = site.projects | where: "category", "art-installations" | sort: "year" | reverse %}
+{% assign commercial = site.projects | where: "category", "commercial" | sort: "year" | reverse %}
+{% assign hackathon = site.projects | where: "category", "hackathon" | sort: "year" | reverse %}
+{% assign gradschool = site.projects | where: "category", "grad-school" | sort: "year" | reverse %}
+
+{% if art.size > 0 %}
+<h2 class="project-category">art installations</h2>
+<div class="project-grid">
+    {% for project in art %}
+    <a href="{{ project.url | prepend: site.baseurl }}" class="project-card">
+        {% if project.image %}
+        <div class="project-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.image }}')"></div>
+        {% else %}
+        <div class="project-thumb no-image"></div>
+        {% endif %}
+        <div class="project-info">
+            <h3>{{ project.title }}</h3>
+            <p class="project-tagline">{{ project.tagline }}</p>
+            <span class="project-year">{{ project.year }}</span>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% if commercial.size > 0 %}
+<h2 class="project-category">commercial projects</h2>
+<div class="project-grid">
+    {% for project in commercial %}
+    <a href="{{ project.url | prepend: site.baseurl }}" class="project-card">
+        {% if project.image %}
+        <div class="project-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.image }}')"></div>
+        {% else %}
+        <div class="project-thumb no-image"></div>
+        {% endif %}
+        <div class="project-info">
+            <h3>{{ project.title }}</h3>
+            <p class="project-tagline">{{ project.tagline }}</p>
+            <span class="project-year">{{ project.year }}</span>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% if hackathon.size > 0 %}
+<h2 class="project-category">hackathon projects</h2>
+<div class="project-grid">
+    {% for project in hackathon %}
+    <a href="{{ project.url | prepend: site.baseurl }}" class="project-card">
+        {% if project.image %}
+        <div class="project-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.image }}')"></div>
+        {% else %}
+        <div class="project-thumb no-image"></div>
+        {% endif %}
+        <div class="project-info">
+            <h3>{{ project.title }}</h3>
+            <p class="project-tagline">{{ project.tagline }}</p>
+            <span class="project-year">{{ project.year }}</span>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% if gradschool.size > 0 %}
+<h2 class="project-category">grad school projects</h2>
+<div class="project-grid">
+    {% for project in gradschool %}
+    <a href="{{ project.url | prepend: site.baseurl }}" class="project-card">
+        {% if project.image %}
+        <div class="project-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.image }}')"></div>
+        {% else %}
+        <div class="project-thumb no-image"></div>
+        {% endif %}
+        <div class="project-info">
+            <h3>{{ project.title }}</h3>
+            <p class="project-tagline">{{ project.tagline }}</p>
+            <span class="project-year">{{ project.year }}</span>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endif %}
