@@ -1,4 +1,5 @@
 ---
+category: grad-school
 title: Eureka!
 short_title: Eureka!
 tagline: AR in public libraries
