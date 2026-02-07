@@ -2,7 +2,7 @@
     <ul>
         <li><a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>about</a></li>
         <li class="has-dropdown">
-            <a href="{{ site.baseurl }}/work/" {% if page.url contains "/work" %}class="active"{% endif %}>work</a><button class="dropdown-toggle">+</button>
+            <a href="{{ site.baseurl }}/work/" {% if page.url contains "/work" or page.category == "commercial" %}class="active"{% endif %}>work</a><button class="dropdown-toggle">+</button>
             <ul class="dropdown">
                 {% assign commercial = site.projects | where: "category", "commercial" | sort: "year" | reverse %}
                 {% for project in commercial %}
@@ -40,7 +40,7 @@
             </ul>
         </li>
         <li class="has-dropdown">
-            <a href="{{ site.baseurl }}/projects/" {% if page.url contains "/projects" %}class="active"{% endif %}>projects</a><button class="dropdown-toggle">+</button>
+            <a href="{{ site.baseurl }}/projects/" {% if page.url == "/projects/" or page.category == "hackathon" or page.category == "grad-school" %}class="active"{% endif %}>projects</a><button class="dropdown-toggle">+</button>
             <ul class="dropdown">
                 {% assign hackathon = site.projects | where: "category", "hackathon" | sort: "year" | reverse %}
                 {% assign gradschool = site.projects | where: "category", "grad-school" | sort: "year" | reverse %}
