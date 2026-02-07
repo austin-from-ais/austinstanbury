@@ -2,34 +2,26 @@
     <ul>
         <li><a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>about</a></li>
         <li class="has-dropdown">
-            <a href="{{ site.baseurl }}/projects/" {% if page.url contains "/projects" %}class="active"{% endif %}>projects</a><button class="dropdown-toggle">+</button>
+            <a href="{{ site.baseurl }}/work/" {% if page.url contains "/projects" or page.url contains "/work" %}class="active"{% endif %}>work</a><button class="dropdown-toggle">+</button>
             <ul class="dropdown">
-                {% assign art = site.projects | where: "category", "art-installations" | sort: "year" | reverse %}
                 {% assign commercial = site.projects | where: "category", "commercial" | sort: "year" | reverse %}
                 {% assign hackathon = site.projects | where: "category", "hackathon" | sort: "year" | reverse %}
                 {% assign gradschool = site.projects | where: "category", "grad-school" | sort: "year" | reverse %}
-                
-                {% if art.size > 0 %}
-                <li class="dropdown-label">art installations</li>
-                {% for project in art %}
-                <li><a href="{{ project.url | prepend: site.baseurl }}">{{ project.short_title | default: project.title }}</a></li>
-                {% endfor %}
-                {% endif %}
-                
+
                 {% if commercial.size > 0 %}
                 <li class="dropdown-label">commercial</li>
                 {% for project in commercial %}
                 <li><a href="{{ project.url | prepend: site.baseurl }}">{{ project.short_title | default: project.title }}</a></li>
                 {% endfor %}
                 {% endif %}
-                
+
                 {% if hackathon.size > 0 %}
                 <li class="dropdown-label">hackathon</li>
                 {% for project in hackathon %}
                 <li><a href="{{ project.url | prepend: site.baseurl }}">{{ project.short_title | default: project.title }}</a></li>
                 {% endfor %}
                 {% endif %}
-                
+
                 {% if gradschool.size > 0 %}
                 <li class="dropdown-label">grad school</li>
                 {% for project in gradschool %}
@@ -38,7 +30,35 @@
                 {% endif %}
             </ul>
         </li>
-        <li><a href="{{ site.baseurl }}/art/" {% if page.url == "/art/" %}class="active"{% endif %}>art</a></li>
+        <li class="has-dropdown">
+            <a href="{{ site.baseurl }}/art/" {% if page.url contains "/art" %}class="active"{% endif %}>art</a><button class="dropdown-toggle">+</button>
+            <ul class="dropdown">
+                {% assign installations = site.artworks | where: "category", "installations" | sort: "year" | reverse %}
+                {% assign visual = site.artworks | where: "category", "visual-works" | sort: "year" | reverse %}
+                {% assign threed = site.artworks | where: "category", "3d" | sort: "year" | reverse %}
+
+                {% if installations.size > 0 %}
+                <li class="dropdown-label">installations</li>
+                {% for artwork in installations %}
+                <li><a href="{{ artwork.url | prepend: site.baseurl }}">{{ artwork.short_title | default: artwork.title }}</a></li>
+                {% endfor %}
+                {% endif %}
+
+                {% if visual.size > 0 %}
+                <li class="dropdown-label">visual works</li>
+                {% for artwork in visual %}
+                <li><a href="{{ artwork.url | prepend: site.baseurl }}">{{ artwork.short_title | default: artwork.title }}</a></li>
+                {% endfor %}
+                {% endif %}
+
+                {% if threed.size > 0 %}
+                <li class="dropdown-label">3D</li>
+                {% for artwork in threed %}
+                <li><a href="{{ artwork.url | prepend: site.baseurl }}">{{ artwork.short_title | default: artwork.title }}</a></li>
+                {% endfor %}
+                {% endif %}
+            </ul>
+        </li>
         <li><a href="{{ site.baseurl }}/papers/" {% if page.url == "/papers/" %}class="active"{% endif %}>papers</a></li>
         <li><a href="{{ site.baseurl }}/talks/" {% if page.url == "/talks/" %}class="active"{% endif %}>talks</a></li>
         <li><a href="{{ site.baseurl }}/cv/" {% if page.url == "/cv/" %}class="active"{% endif %}>cv</a></li>

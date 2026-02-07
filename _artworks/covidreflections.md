@@ -1,5 +1,5 @@
 ---
-category: art-installations
+category: installations
 title: Covid Reflections
 short_title: CovidReflections
 tagline: AR public health installation with AI body tracking

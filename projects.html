@@ -1,16 +1,68 @@
 ---
 layout: default
-title: Projects
-permalink: /projects/
+title: Work
+permalink: /work/
 ---
 
+<h1>work</h1>
+
+{% assign commercial = site.projects | where: "category", "commercial" | sort: "year" | reverse %}
+{% assign hackathon = site.projects | where: "category", "hackathon" | sort: "year" | reverse %}
+{% assign gradschool = site.projects | where: "category", "grad-school" | sort: "year" | reverse %}
+
+{% if commercial.size > 0 %}
+<h2 class="project-category">commercial</h2>
 <div class="project-grid">
-    {% assign sorted_projects = site.projects | sort: "year" | reverse %}
-    {% for project in sorted_projects %}
+    {% for project in commercial %}
     <a href="{{ project.url | prepend: site.baseurl }}" class="project-card">
-        <img src="{{ site.baseurl }}/assets/images/{{ project.image }}" alt="{{ project.title }}" class="project-thumb">
-        <p class="project-title">{{ project.title }}</p>
-        <p class="project-meta">{{ project.year }}</p>
+        {% if project.image %}
+        <div class="project-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.image }}')"></div>
+        {% else %}
+        <div class="project-thumb no-image"></div>
+        {% endif %}
+        <div class="project-info">
+            <p class="project-title">{{ project.title }}</p>
+            <p class="project-meta">{{ project.year }}</p>
+        </div>
     </a>
     {% endfor %}
 </div>
+{% endif %}
+
+{% if hackathon.size > 0 %}
+<h2 class="project-category">hackathon</h2>
+<div class="project-grid">
+    {% for project in hackathon %}
+    <a href="{{ project.url | prepend: site.baseurl }}" class="project-card">
+        {% if project.image %}
+        <div class="project-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.image }}')"></div>
+        {% else %}
+        <div class="project-thumb no-image"></div>
+        {% endif %}
+        <div class="project-info">
+            <p class="project-title">{{ project.title }}</p>
+            <p class="project-meta">{{ project.year }}</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% if gradschool.size > 0 %}
+<h2 class="project-category">grad school</h2>
+<div class="project-grid">
+    {% for project in gradschool %}
+    <a href="{{ project.url | prepend: site.baseurl }}" class="project-card">
+        {% if project.image %}
+        <div class="project-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.image }}')"></div>
+        {% else %}
+        <div class="project-thumb no-image"></div>
+        {% endif %}
+        <div class="project-info">
+            <p class="project-title">{{ project.title }}</p>
+            <p class="project-meta">{{ project.year }}</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endif %}

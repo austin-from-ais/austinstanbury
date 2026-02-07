@@ -1,8 +1,8 @@
 ---
-category: art-installations
+category: installations
 title: Infinite Particularity
 short_title: Infinite Particularity
-tagline: 
+tagline:
 year: 2023
 image: infiniteparticularity.png
 ---
