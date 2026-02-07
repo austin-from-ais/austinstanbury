@@ -1,4 +1,5 @@
 ---
+category: grad-school
 title: "HoloKeys: AR Music Education"
 short_title: HoloKeys
 tagline: Remote piano teaching interface with AR and IoT

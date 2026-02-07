@@ -1,4 +1,5 @@
 ---
+category: grad-school
 title: HUSH
 short_title: HUSH
 tagline: VR horror escape room
