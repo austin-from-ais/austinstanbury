@@ -6,6 +6,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:slug/
+  artworks:
+    output: true
+    permalink: /art/:slug/
 
 defaults:
   - scope:
@@ -13,6 +16,11 @@ defaults:
       type: "projects"
     values:
       layout: "project"
+  - scope:
+      path: ""
+      type: "artworks"
+    values:
+      layout: "artwork"
 
 exclude:
   - README.md

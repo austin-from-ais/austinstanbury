@@ -1,8 +1,8 @@
 ---
-category: art-installations
+category: installations
 title: Shadows of Tomorrow
 short_title: Shadows of Tomorrow
-tagline: 
+tagline:
 year: 2024
 image: shadowsoftomorrow.png
 ---

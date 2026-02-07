@@ -1,8 +1,8 @@
 ---
-category: art-installations
+category: installations
 title: MPulse
 short_title: MPulse
-tagline: 
+tagline:
 year: 2023
 image: mpulse.png
 ---
