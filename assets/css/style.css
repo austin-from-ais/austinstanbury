@@ -159,6 +159,38 @@ a {
     margin-top: 2px;
 }
 
+/* === COLLAGE GRID === */
+.collage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.collage-item {
+    display: block;
+}
+
+.collage-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #e0e0e0;
+    margin-bottom: 10px;
+    transition: opacity 0.15s ease;
+}
+
+.collage-item:hover img {
+    opacity: 0.8;
+}
+
+@media (max-width: 700px) {
+    .collage-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
 /* === LIST PAGES (papers, talks, etc) === */
 .item-list {
     list-style: none;
