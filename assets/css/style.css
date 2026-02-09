@@ -223,6 +223,14 @@ a {
     font-weight: 500;
 }
 
+.cv-entry-title a {
+    transition: color 0.15s ease;
+}
+
+.cv-entry-title a:hover {
+    color: var(--color-accent);
+}
+
 .cv-entry-org {
     font-size: 0.875rem;
     color: var(--color-text-light);
