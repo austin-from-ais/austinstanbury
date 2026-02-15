@@ -63,6 +63,7 @@ a {
 .nav a {
     font-size: 0.9375rem;
     transition: color 0.15s ease;
+    line-height: 1.2;
 }
 
 .nav a:hover {
