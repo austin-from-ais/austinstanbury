@@ -333,6 +333,8 @@ a {
     font-size: 0.75rem;
     font-style: italic;
     color: #999;
+    line-height: 1.05;
+    display: inline-block;
 }
 
 .dropdown a:hover {
@@ -454,6 +456,40 @@ a {
 
 .project-links a:hover {
     text-decoration: underline;
+}
+
+.project-highlights {
+    background: #f0f0f0;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+.project-highlights h3 {
+    font-weight: 500;
+    font-size: 0.9375rem;
+    margin-bottom: 10px;
+}
+
+.project-highlights ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-highlights li {
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.project-highlights li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--color-text-light);
 }
 
 .project-note {

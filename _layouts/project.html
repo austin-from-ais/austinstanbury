@@ -31,6 +31,17 @@
                 </header>
 
                 <div class="project-body">
+                    {% if page.highlights %}
+                    <div class="project-highlights">
+                        <h3>{{ page.highlights.title }}</h3>
+                        <ul>
+                            {% for item in page.highlights.items %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+
                     {% if page.note %}
                     <div class="project-note">
                         <p><strong>Note:</strong> {{ page.note }}</p>

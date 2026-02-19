@@ -15,8 +15,14 @@ features:
 tech: Built in Unity 2022.3.40f with XR Interaction Toolkit v3.0.7 and XR Hands v1.4.3 for hand tracking. 3D chip packaging models created in Maya. GPT integration via fine-tuned CustomGPT models trained on domain-specific microelectronics data. Deployed on Meta Quest 3 for MR conditions and WebGL for PC conditions. Voice synthesis through ElevenLabs. Applications available on Meta Store and GitHub.
 links:
   - label: "CHI '26 Paper: Facilitating Hands-On Learning in Microelectronics Education through Mixed Reality and AI Pedagogical Agents (conditionally accepted)"
-    url: "#"
-note: "$450K funded by Department of Defense and National Science Foundation in collaboration with Purdue University and SCALE initiative. Presented at IEEE PAINE, SCALE-Con in Washington DC, ACM CHI 2025 in Yokohama, and ACM CSCW 2025 in Bergen. Also published at ACM CHI EA 2025, ACM CSCW Companion 2025, and Computers and Education: Artificial Intelligence (2026)."
+    url: "/austinstanbury/papers/"
+highlights:
+  title: "Project Highlights:"
+  items:
+    - "$450K funded by Department of Defense and National Science Foundation"
+    - "In collaboration with Purdue University and SCALE initiative"
+    - "Presented at IEEE PAINE, SCALE-Con in Washington DC, ACM CHI 2025 in Yokohama, and ACM CSCW 2025 in Bergen"
+    - "Published at ACM CHI EA 2025, ACM CSCW Companion 2025, and Computers and Education: Artificial Intelligence (2026)"
 ---
 
 Virtual Pedagogical Agents is a suite of desktop and Mixed Reality applications for microelectronics education that combine interactive learning modules with context-aware AI tutoring. Students learn by directly interacting with 3D models of chip packaging structures—toggling component visibility, scaling objects for closer inspection, and assembling components in LEGO-like exercises that build visual-spatial understanding of complex semiconductor architectures. A GPT-powered virtual tutor accompanies students throughout, answering context-specific questions in real time, aware of what the student is holding, their progress, what they're learning, and their prior conversation history.
