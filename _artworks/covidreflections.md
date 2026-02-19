@@ -5,6 +5,12 @@ short_title: CovidReflections
 tagline: AR public health installation with AI body tracking
 year: 2022
 image: covidreflections.png
+demo: cr.gif
+video: ectvq_9PRJg
+award: "Arts for UF Vaccine Confidence Program"
+award_line:
+  - "Arts for UF Vaccine Confidence Program"
+  - "Published at ACM VRST 2022"
 features:
   - AI LiDAR body tracking displaying virtual avatar mirroring user movements
   - Visualization of COVID-19 symptoms on transparent avatar body showing internal organs
