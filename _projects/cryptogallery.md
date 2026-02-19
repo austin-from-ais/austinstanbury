@@ -6,6 +6,7 @@ tagline: Blockchain-enhanced virtual art gallery with multiplayer and voice chat
 year: 2022
 date: 2022-01-01
 image: cryptogallery.png
+video: UTapOlhXh7o
 features:
   - ChainSafe SDK integration for pulling on-chain artwork directly into VR gallery exhibits
   - Multiplayer connectivity via Normcore with voice chat for shared gallery visits

@@ -6,6 +6,7 @@ tagline: Remote piano education combining augmented reality with IoT to let inst
 year: 2021
 date: 2021-01-01
 image: holokeys.jpg
+video: tG27mN53Pms
 features:
   - Instructor sees a holographic piano on an AR headset and uses hand gestures to play it remotely
   - Each gesture triggers a physical key press on the student's real-world piano via wifi-enabled microcontrollers and servo motors

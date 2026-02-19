@@ -6,6 +6,7 @@ tagline: VR horror escape room
 year: 2022
 date: 2022-01-01
 image: hush.png
+video: WH2j07WwRek
 features:
   - Interactive haunted mansion escape room experience
   - Puzzle mechanics including candle lighting sequences and Ouija board with controller haptics

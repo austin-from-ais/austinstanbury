@@ -12,17 +12,21 @@ permalink: /art/
 
 {% if installations.size > 0 %}
 <h2 class="project-category">installations</h2>
-<div class="project-grid">
+<div class="project-mosaic">
     {% for artwork in installations %}
-    <a href="{{ artwork.url | prepend: site.baseurl }}" class="project-card">
-        {% if artwork.image %}
-        <div class="project-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ artwork.image }}')"></div>
+    <a href="{{ artwork.url | prepend: site.baseurl }}" class="mosaic-card">
+        {% if artwork.demo %}
+        <div class="mosaic-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ artwork.demo }}')"></div>
+        {% elsif artwork.video %}
+        <div class="mosaic-thumb" style="background-image: url('https://img.youtube.com/vi/{{ artwork.video }}/hqdefault.jpg')"></div>
+        {% elsif artwork.image %}
+        <div class="mosaic-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ artwork.image }}')"></div>
         {% else %}
-        <div class="project-thumb no-image"></div>
+        <div class="mosaic-thumb no-image"></div>
         {% endif %}
-        <div class="project-info">
-            <p class="project-title">{{ artwork.title }}</p>
-            <p class="project-meta">{{ artwork.year }}</p>
+        <div class="mosaic-info">
+            <p class="mosaic-title">{{ artwork.title }}</p>
+            <p class="mosaic-meta">{{ artwork.year }}</p>
         </div>
     </a>
     {% endfor %}

@@ -5,6 +5,7 @@ short_title: Infinite Particularity
 tagline: Can a constrained AI produce authentic art?
 year: 2026
 image: infiniteparticularity.png
+demo: particularity-demo.gif
 features:
   - Three-screen triptych installation testing whether AI can develop an authentic artistic perspective
   - Synthetic subjectivity engine (ip.py) combining parametric identity with lived experience
