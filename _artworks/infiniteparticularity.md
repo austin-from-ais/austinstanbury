@@ -6,6 +6,9 @@ tagline: Can a constrained AI produce authentic art?
 year: 2026
 image: infiniteparticularity.png
 demo: particularity-demo.gif
+website: https://infiniteparticularity.com
+award: "MIT Reality Hack Art Grant"
+award_line: "MIT Reality Hack Art Grant Recipient 2026"
 features:
   - Three-screen triptych installation testing whether AI can develop an authentic artistic perspective
   - Synthetic subjectivity engine (ip.py) combining parametric identity with lived experience

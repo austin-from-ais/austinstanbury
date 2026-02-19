@@ -448,6 +448,30 @@ a {
     color: var(--color-text-light);
 }
 
+.project-website {
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.project-website a {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    transition: color 0.15s ease;
+}
+
+.project-website a:hover {
+    text-decoration: underline;
+}
+
+.project-award-line {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-light);
+    margin: 0;
+    line-height: 1.4;
+}
+
 .project-body p {
     margin-bottom: 16px;
     line-height: 1.7;

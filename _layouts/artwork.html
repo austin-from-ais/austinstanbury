@@ -21,12 +21,26 @@
                     {% if page.tagline %}<p class="project-tagline">{{ page.tagline }}</p>{% endif %}
                     <p class="project-date">{{ page.year }}</p>
 
-                    {% if page.demo %}
-                    <img src="{{ site.baseurl }}/assets/images/{{ page.demo }}" alt="{{ page.title }}" class="project-image">
-                    {% elsif page.video %}
+                    {% if page.website %}
+                    <p class="project-website"><a href="{{ page.website }}" target="_blank">{{ page.website }} →</a></p>
+                    {% endif %}
+
+                    {% if page.award_line %}
+                    {% if page.award_line.first %}
+                    {% for line in page.award_line %}
+                    <p class="project-award-line">{{ line }}</p>
+                    {% endfor %}
+                    {% else %}
+                    <p class="project-award-line">{{ page.award_line }}</p>
+                    {% endif %}
+                    {% endif %}
+
+                    {% if page.video %}
                     <div class="project-video">
                         <iframe src="https://www.youtube.com/embed/{{ page.video }}" allowfullscreen></iframe>
                     </div>
+                    {% elsif page.demo %}
+                    <img src="{{ site.baseurl }}/assets/images/{{ page.demo }}" alt="{{ page.title }}" class="project-image">
                     {% elsif page.image %}
                     <img src="{{ site.baseurl }}/assets/images/{{ page.image }}" alt="{{ page.title }}" class="project-image">
                     {% endif %}

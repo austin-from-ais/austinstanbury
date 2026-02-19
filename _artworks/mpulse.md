@@ -5,6 +5,9 @@ short_title: MPulse
 tagline: Interactive climate installation giving Mesa a voice
 year: 2025
 image: mpulse.png
+demo: mpulse.gif
+award: "ASU Remix Community Impact Award"
+award_line: "ASU Remix Community Impact Award"
 features:
   - Community Impact Award at ASU Tech for Change: Remix the Future
   - Interactive heat map of Mesa exploring climate inequality and urban cooling zones

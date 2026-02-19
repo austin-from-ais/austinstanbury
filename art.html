@@ -27,6 +27,15 @@ permalink: /art/
         <div class="mosaic-info">
             <p class="mosaic-title">{{ artwork.title }}</p>
             <p class="mosaic-meta">{{ artwork.year }}</p>
+            {% if artwork.award %}
+                {% if artwork.award.first %}
+                {% for line in artwork.award %}
+                <p class="mosaic-award">{{ line }}</p>
+                {% endfor %}
+                {% else %}
+                <p class="mosaic-award">{{ artwork.award }}</p>
+                {% endif %}
+            {% endif %}
         </div>
     </a>
     {% endfor %}

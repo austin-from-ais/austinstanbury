@@ -5,6 +5,14 @@ short_title: Shadows of Tomorrow
 tagline: Immersive climate change narrative using extended reality
 year: 2024
 image: shadowsoftomorrow.png
+demo: shadows.gif
+video: o6H-NFY4dH0
+award:
+  - "MIT Reality Hack Art Grant"
+  - "GFAA Award of Excellence"
+award_line:
+  - "MIT Reality Hack Art Grant Recipient"
+  - "GFAA Award of Excellence"
 features:
   - $500 prize from Gainesville Fine Arts Association, judged by Jane Gilbert and Jeff Goodell
   - Art Grant Recipient and displayed at MIT Reality Hack 2025
