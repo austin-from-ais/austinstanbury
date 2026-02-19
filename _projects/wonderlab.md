@@ -16,7 +16,7 @@ links:
     url: https://github.com/inessaid/HackGT2020
   - label: Devpost
     url: https://devpost.com/software/wonderlab
-note: "Built during the pandemic when everyone was losing touch with the places they loved—restaurants, parks, friends' houses. We wanted to let people recreate those spaces in VR, accessible to anyone regardless of technical skill. Just tell Rollanda what you want and she makes it appear. I spent 12 hours on the demo video alone."
+note: "Built during the pandemic when everyone was losing touch with the places they loved—restaurants, parks, friends' houses. We wanted to let people recreate those spaces in VR, accessible to anyone regardless of technical skill. Just tell Rollanda what you want and she makes it appear."
 ---
 
 WonderLab places users in a digital realm accompanied by Rollanda, an AI assistant robot who can make anything you desire appear in the space. She has access to a large library of assets—rooms, trees, furniture, paintings, kitchen items—and responds to natural voice commands. Say "I want a room" and she'll make one appear with a cheerful "voila!"
