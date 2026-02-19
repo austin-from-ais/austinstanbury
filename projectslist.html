@@ -7,7 +7,7 @@ permalink: /projects/
 <h1>projects</h1>
 
 {% assign hackathon = site.projects | where: "category", "hackathon" | sort: "year" | reverse %}
-{% assign gradschool = site.projects | where: "category", "grad-school" | sort: "position" | sort: "year" | reverse %}
+{% assign gradschool = site.projects | where: "category", "grad-school" | sort: "order" | reverse %}
 
 {% if hackathon.size > 0 %}
 <h2 class="project-category">hackathon</h2>
