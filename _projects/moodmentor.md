@@ -4,6 +4,7 @@ title: MoodMentor Suite
 short_title: MoodMentor
 tagline: VR for neurodivergent adults
 year: 2024
+date: 2024-01-01
 image: moodmentor.png
 features:
   - Mindfulness-focused VR scenario designed for adults with intellectual and developmental disabilities

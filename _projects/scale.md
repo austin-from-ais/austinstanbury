@@ -4,6 +4,7 @@ title: "UF: Virtual Pedagogical Agents"
 short_title: Virtual Pedagogical Agents
 tagline: AI-powered learning in microelectronics through immersive applications
 year: 2025
+date: 2025-01-02
 image: scale.png
 features:
   - Context-aware GPT-powered pedagogical agent with awareness of student progress, held objects, and learning context
@@ -39,4 +40,4 @@ These findings informed a broader scoping review synthesizing 54 studies on AI a
 
 This work has also given birth to the PATHS program at UF, designed to help autistic adults find career opportunities in the microelectronics industry.
 
-Built with Serene Cheon, Juan Francisco Lam, Dr. Hyo Jeong Kang, Pavanbabu Arjunamahanthi, Himanandhan Reddy Kottur, Navid Asadizanjani, Kun Xu, Zifeng Liu, Xinyue Jiao, and Wanli Xing.
+Built with Serene Cheon, Juan Francisco Lam, Dr. Hyo Jeong Kang, Pavanbabu Arjunamahanthi, Himanandhan Reddy Kottur, Dr. Navid Asadi, Kun Xu, Zifeng Liu, Xinyue Jiao, and Wanli Xing.

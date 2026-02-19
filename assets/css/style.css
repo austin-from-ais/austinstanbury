@@ -940,6 +940,12 @@ a {
     margin-bottom: 12px;
 }
 
+.work-subsection {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid #eee;
+}
+
 .hello-collabs {
     list-style: none;
     padding: 0;

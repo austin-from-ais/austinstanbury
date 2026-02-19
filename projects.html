@@ -6,7 +6,7 @@ permalink: /work/
 
 <h1>work</h1>
 
-{% assign commercial = site.projects | where: "category", "commercial" | sort: "year" | reverse %}
+{% assign commercial = site.projects | where: "category", "commercial" | sort: "date" | reverse %}
 
 <div class="project-mosaic">
     {% for project in commercial %}
@@ -24,4 +24,68 @@ permalink: /work/
         </div>
     </a>
     {% endfor %}
+</div>
+
+<div class="hello-section work-subsection">
+    <h2>partner organizations</h2>
+    <ul class="hello-collabs">
+        <li>
+            <p class="hello-collab-name">University of Florida</p>
+            <p class="hello-collab-detail">Herbert Wertheim College of Engineering · Digital Worlds Institute · Florida Semiconductor Institute</p>
+        </li>
+        <li>
+            <p class="hello-collab-name">Purdue University</p>
+            <p class="hello-collab-detail">SCALE initiative · Microelectronics workforce development</p>
+        </li>
+        <li>
+            <p class="hello-collab-name">Access3D Lab, University of South Florida</p>
+            <p class="hello-collab-detail">Dr. Laura Harrison · Fort De Soto AR · Bartow AR Murals</p>
+        </li>
+        <li>
+            <p class="hello-collab-name">Road to Responsibility</p>
+            <p class="hello-collab-detail">Massachusetts DDS · MoodMentor VR deployment</p>
+        </li>
+        <li>
+            <p class="hello-collab-name">Industry Partners</p>
+            <p class="hello-collab-detail">Micron · AMD · Intel · GlobalFoundries · NHanced · SkyWater · Lockheed Martin</p>
+        </li>
+    </ul>
+</div>
+
+<div class="hello-section work-subsection">
+    <h2>key collaborators</h2>
+    <ul class="hello-collabs">
+        <li>
+            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/hyo-kang-245bbb252/" target="_blank">Dr. Hyo Jeong Kang</a></p>
+            <p class="hello-collab-detail">Virtual Pedagogical Agents · HoloKeys · Shadows of Tomorrow · 6 co-authored publications</p>
+        </li>
+        <li>
+            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/navid-asadi-326ab732/" target="_blank">Dr. Navid Asadi</a></p>
+            <p class="hello-collab-detail">Virtual Pedagogical Agents · PATHS Program · co-authored publications</p>
+        </li>
+        <li>
+            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/harrisonlkh/" target="_blank">Dr. Laura Harrison</a></p>
+            <p class="hello-collab-detail">Access3D Lab, USF · Bartow AR Murals · Fort De Soto AR Reconstructions</p>
+        </li>
+        <li>
+            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/nigel-newbutt-27a86921/" target="_blank">Dr. Nigel Newbutt</a></p>
+            <p class="hello-collab-detail">PATHS Program · Neurodivergent workforce development</p>
+        </li>
+        <li>
+            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/chris-white-ed-d-43025015/" target="_blank">Chris White, Ed.D.</a></p>
+            <p class="hello-collab-detail">MoodMentor Suite · Road to Responsibility</p>
+        </li>
+        <li>
+            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/serene-cheon/" target="_blank">Serene Cheon</a></p>
+            <p class="hello-collab-detail">Virtual Pedagogical Agents · 3 co-authored publications including CHI '26</p>
+        </li>
+        <li>
+            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/juanlam/" target="_blank">Juan Francisco Lam</a></p>
+            <p class="hello-collab-detail">Virtual Pedagogical Agents · Infinite Particularity · co-authored publications</p>
+        </li>
+        <li>
+            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/logankemper/" target="_blank">Logan Kemper</a></p>
+            <p class="hello-collab-detail">Virtual Pedagogical Agents</p>
+        </li>
+    </ul>
 </div>
