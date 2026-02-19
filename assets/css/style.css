@@ -235,6 +235,17 @@ a {
 }
 
 /* === CV PAGE === */
+.cv-download {
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 32px;
+}
+
+.cv-download:hover {
+    text-decoration: underline;
+}
+
 .cv-section {
     margin-bottom: 48px;
 }
