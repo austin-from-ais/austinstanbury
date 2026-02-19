@@ -240,6 +240,7 @@ a {
     font-weight: 500;
     display: inline-block;
     margin-bottom: 32px;
+    color: var(--color-accent);
 }
 
 .cv-download:hover {
