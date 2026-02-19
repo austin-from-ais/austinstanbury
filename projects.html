@@ -8,6 +8,7 @@ permalink: /work/
 
 {% assign commercial = site.projects | where: "category", "commercial" | sort: "date" | reverse %}
 
+<h2 class="project-category">commercial projects</h2>
 <div class="project-mosaic">
     {% for project in commercial %}
     <a href="{{ project.url | prepend: site.baseurl }}" class="mosaic-card">

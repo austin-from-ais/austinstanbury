@@ -5,6 +5,7 @@ short_title: Virtual Pedagogical Agents
 tagline: AI-powered learning in microelectronics through immersive applications
 year: 2025
 date: 2025-01-02
+local_video: assets/video/vpa.mp4
 image: scale.png
 features:
   - Context-aware GPT-powered pedagogical agent with awareness of student progress, held objects, and learning context
