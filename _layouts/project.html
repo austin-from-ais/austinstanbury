@@ -25,7 +25,11 @@
                     {% if page.tagline %}<p class="project-tagline">{{ page.tagline }}</p>{% endif %}
                     <p class="project-date">{{ page.year }}</p>
 
-                    {% if page.image %}
+                    {% if page.video %}
+                    <div class="project-video">
+                        <iframe src="https://www.youtube.com/embed/{{ page.video }}" allowfullscreen></iframe>
+                    </div>
+                    {% elsif page.image %}
                     <img src="{{ site.baseurl }}/assets/images/{{ page.image }}" alt="{{ page.title }}" class="project-image">
                     {% endif %}
                 </header>
@@ -49,12 +53,6 @@
                     {% endif %}
 
                     {{ content }}
-
-                    {% if page.video %}
-                    <div class="project-video">
-                        <iframe src="https://www.youtube.com/embed/{{ page.video }}" allowfullscreen></iframe>
-                    </div>
-                    {% endif %}
 
                     {% if page.features %}
                     <h2>key features</h2>

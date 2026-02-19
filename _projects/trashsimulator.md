@@ -4,6 +4,7 @@ title: Trash Simulator
 short_title: TrashSimulator
 tagline: Visualize your environmental impact with AI, VR, and trash
 year: 2020
+award: "Winner: Knight Hacks 2020"
 image: trashsimulator.png
 features:
   - AI-powered trashbot "Poubelle" using IBM Watson for natural language interaction
@@ -17,6 +18,7 @@ links:
     url: https://github.com/Linkraft/KnightHacks2020
   - label: Devpost
     url: https://devpost.com/software/trash-simulator
+video: vJtxs6iU228
 note: "The inspiration for this project came from a failed attempt at zero-waste living. Our apartment building didn't have recycling facilities, so we convinced ourselves we'd take recyclables to a nearby center weekly. This did not happen. The piles grew. Roommates complained. Visitors remarked things like 'dude what the heck take your recyclables out.' But somewhere in the sweaty hour before my grandma arrived, sorting six different types of bottles and scrubbing Styrofoam containers, we had an epiphany: when you have to directly face how much trash you produce, you want to produce less of it. We wanted to bring that experience to the world through VR."
 ---
 

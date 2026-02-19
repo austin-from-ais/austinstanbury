@@ -130,6 +130,52 @@ a {
     gap: 24px;
 }
 
+/* === MOSAIC GRID === */
+.project-mosaic {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.mosaic-card {
+    display: block;
+    text-decoration: none;
+}
+
+.mosaic-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-position: center;
+    background-color: #e0e0e0;
+    transition: opacity 0.15s ease;
+}
+
+.mosaic-card:hover .mosaic-thumb {
+    opacity: 0.8;
+}
+
+.mosaic-info {
+    padding: 8px 0 4px;
+}
+
+.mosaic-title {
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+.mosaic-meta {
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+}
+
+.mosaic-award {
+    font-size: 0.6875rem;
+    color: var(--color-text-light);
+    margin-top: 2px;
+    line-height: 1.4;
+}
+
 .project-card {
     display: block;
 }
@@ -627,6 +673,10 @@ a {
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
+    }
+
+    .project-mosaic {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

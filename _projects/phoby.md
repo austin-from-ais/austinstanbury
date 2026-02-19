@@ -4,6 +4,7 @@ title: Phoby
 short_title: Phoby
 tagline: VR application to help people overcome phobias
 year: 2019
+award: "first hackathon <3"
 image: phoby.png
 features:
   - Multiple phobia modules including heights and spiders
@@ -21,6 +22,7 @@ links:
     url: https://devpost.com/software/phobi
   - label: Devpost (VR Therapy)
     url: https://devpost.com/software/vr-therapy
+video: jbO-0UYd1eY
 note: "This project is quite sentimental to me—it was the first real VR project I ever worked on. I remember sleeping on the floor of Harvard, amazed that I made it there in the first place. I was dirt poor and stressed. I didn't understand Unity, I didn't understand 3D modelling, I didn't understand much of anything. Sometimes I go back and look at this little notch in the mural of my life just to see how far I've come. I will never forget those pleasant times."
 ---
 

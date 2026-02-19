@@ -4,6 +4,7 @@ title: WonderLab
 short_title: WonderLab
 tagline: Voice-controlled VR world-building with AI
 year: 2020
+award: "Winner: HackGT 7"
 image: wonderlab.png
 features:
   - Voice-controlled object spawning via IBM Watson Assistant
@@ -16,6 +17,7 @@ links:
     url: https://github.com/inessaid/HackGT2020
   - label: Devpost
     url: https://devpost.com/software/wonderlab
+video: 1XApRfcdzDY
 note: "Built during the pandemic when everyone was losing touch with the places they loved—restaurants, parks, friends' houses. We wanted to let people recreate those spaces in VR, accessible to anyone regardless of technical skill. Just tell Rollanda what you want and she makes it appear."
 ---
 

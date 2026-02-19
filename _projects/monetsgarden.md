@@ -4,6 +4,7 @@ title: "Monet's Garden"
 short_title: "Monet's Garden"
 tagline: VR meditation and self-care experience
 year: 2021
+award: "Winner: HackViolet"
 image: monetsgarden.png
 features:
   - Photorealistic garden environment using Quixel Megascans photogrammetry
@@ -16,6 +17,7 @@ links:
     url: https://github.com/inessaid/Monetgarden
   - label: Devpost
     url: https://devpost.com/software/monet-s-garden
+video: RlyC8Wuo_Sg
 ---
 
 Monet's Garden is a VR experience offering guided meditation, relaxing virtual walks, and creative light painting in a photorealistic public garden. Enter from the office, school, or home and be instantly transported to a lush garden with broad walking paths, a bamboo forest, and a pergola for guided meditation.

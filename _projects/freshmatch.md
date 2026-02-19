@@ -4,6 +4,7 @@ title: Fresh Match
 short_title: FreshMatch
 tagline: Connecting local growers with local restaurants
 year: 2021
+award: "Winner: Hackatown 2021"
 image: freshmatch.png
 features:
   - Tinder-style swipe matching between producers and buyers
@@ -16,6 +17,7 @@ links:
     url: https://github.com/inessaid/Fresh-Match-Hackatown
   - label: Devpost
     url: https://devpost.com/software/fresh-match
+video: WNRXueYzfi0
 note: "First French hackathon—we did the entire 8-minute demo video in French even though we were all more comfortable in English. At one point we had 40 minutes to design stickers, print them, push the app to the phone, and run to the store before it closed to film a demo. Also the first time we got Firebase Firestore to actually work in a project."
 ---
 

@@ -11,17 +11,20 @@ permalink: /projects/
 
 {% if hackathon.size > 0 %}
 <h2 class="project-category">hackathon</h2>
-<div class="project-grid">
+<div class="project-mosaic">
     {% for project in hackathon %}
-    <a href="{{ project.url | prepend: site.baseurl }}" class="project-card">
-        {% if project.image %}
-        <div class="project-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.image }}')"></div>
+    <a href="{{ project.url | prepend: site.baseurl }}" class="mosaic-card">
+        {% if project.video %}
+        <div class="mosaic-thumb" style="background-image: url('https://img.youtube.com/vi/{{ project.video }}/hqdefault.jpg')"></div>
+        {% elsif project.image %}
+        <div class="mosaic-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.image }}')"></div>
         {% else %}
-        <div class="project-thumb no-image"></div>
+        <div class="mosaic-thumb no-image"></div>
         {% endif %}
-        <div class="project-info">
-            <p class="project-title">{{ project.title }}</p>
-            <p class="project-meta">{{ project.year }}</p>
+        <div class="mosaic-info">
+            <p class="mosaic-title">{{ project.title }}</p>
+            <p class="mosaic-meta">{{ project.year }}</p>
+            {% if project.award %}<p class="mosaic-award">{{ project.award }}</p>{% endif %}
         </div>
     </a>
     {% endfor %}
@@ -30,17 +33,19 @@ permalink: /projects/
 
 {% if gradschool.size > 0 %}
 <h2 class="project-category">grad school</h2>
-<div class="project-grid">
+<div class="project-mosaic">
     {% for project in gradschool %}
-    <a href="{{ project.url | prepend: site.baseurl }}" class="project-card">
-        {% if project.image %}
-        <div class="project-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.image }}')"></div>
+    <a href="{{ project.url | prepend: site.baseurl }}" class="mosaic-card">
+        {% if project.video %}
+        <div class="mosaic-thumb" style="background-image: url('https://img.youtube.com/vi/{{ project.video }}/hqdefault.jpg')"></div>
+        {% elsif project.image %}
+        <div class="mosaic-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.image }}')"></div>
         {% else %}
-        <div class="project-thumb no-image"></div>
+        <div class="mosaic-thumb no-image"></div>
         {% endif %}
-        <div class="project-info">
-            <p class="project-title">{{ project.title }}</p>
-            <p class="project-meta">{{ project.year }}</p>
+        <div class="mosaic-info">
+            <p class="mosaic-title">{{ project.title }}</p>
+            <p class="mosaic-meta">{{ project.year }}</p>
         </div>
     </a>
     {% endfor %}
