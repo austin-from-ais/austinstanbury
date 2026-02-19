@@ -880,6 +880,14 @@ a {
     font-weight: 500;
 }
 
+.hello-collab-name a {
+    transition: color 0.15s ease;
+}
+
+.hello-collab-name a:hover {
+    color: var(--color-accent);
+}
+
 .hello-collab-detail {
     font-size: 0.8125rem;
     color: var(--color-text-light);

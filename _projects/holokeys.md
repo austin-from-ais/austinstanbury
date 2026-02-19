@@ -37,6 +37,6 @@ The project was developed during the COVID-19 pandemic, when remote instruction 
 
 **Publication**
 
-The work was published at the ACM Symposium on Virtual Reality Software and Technology (VRST '21) in Osaka, Japan as "HoloKeys: Interactive Piano Education Using Augmented Reality and IoT" with Ines Said and Hyo Jeong Kang.
+The work was published at the ACM Symposium on Virtual Reality Software and Technology (VRST '21) in Osaka, Japan as "HoloKeys: Interactive Piano Education Using Augmented Reality and IoT" with Ines Said and Dr. Hyo Jeong Kang.
 
-Built with Ines Said and Hyo Jeong Kang at the University of Florida.
+Built with Ines Said and Dr. Hyo Jeong Kang at the University of Florida.
