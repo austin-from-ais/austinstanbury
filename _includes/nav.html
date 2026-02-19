@@ -50,7 +50,7 @@
             <a href="{{ site.baseurl }}/projects/" {% if page.url == "/projects/" or page.category == "hackathon" or page.category == "grad-school" %}class="active"{% endif %}>projects</a><button class="dropdown-toggle">+</button>
             <ul class="dropdown">
                 {% assign hackathon = site.projects | where: "category", "hackathon" | sort: "year" | reverse %}
-                {% assign gradschool = site.projects | where: "category", "grad-school" | sort: "order" | reverse %}
+                {% assign gradschool = site.projects | where: "category", "grad-school" | sort: "date" | reverse %}
 
                 {% if hackathon.size > 0 %}
                 <li class="dropdown-label">hackathon</li>

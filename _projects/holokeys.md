@@ -4,7 +4,7 @@ title: "HoloKeys: AR Music Education"
 short_title: HoloKeys
 tagline: Remote piano education combining augmented reality with IoT to let instructors physically play a student's piano from anywhere
 year: 2021
-order: 2
+date: 2021-01-01
 image: holokeys.jpg
 features:
   - Instructor sees a holographic piano on an AR headset and uses hand gestures to play it remotely

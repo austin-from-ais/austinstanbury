@@ -3,7 +3,8 @@ category: grad-school
 title: HUSH
 short_title: HUSH
 tagline: VR horror escape room
-year: 2021
+year: 2022
+date: 2022-01-01
 image: hush.png
 features:
   - Interactive haunted mansion escape room experience

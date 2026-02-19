@@ -4,7 +4,7 @@ title: Eureka!
 short_title: Eureka!
 tagline: AR in public libraries
 year: 2020
-order: 1
+date: 2020-01-01
 image: eureka.png
 features:
   - AR image markers generated from book covers using Vuforia Engine
