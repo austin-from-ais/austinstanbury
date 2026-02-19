@@ -4,6 +4,7 @@ title: CryptoGallery
 short_title: CryptoGallery
 tagline: Blockchain-enhanced virtual art gallery with multiplayer and voice chat
 year: 2022
+position: 2
 image: cryptogallery.png
 features:
   - ChainSafe SDK integration for pulling on-chain artwork directly into VR gallery exhibits
