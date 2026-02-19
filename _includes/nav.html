@@ -1,6 +1,6 @@
 <nav class="nav">
     <ul>
-        <li><a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>about</a></li>
+        <li><a href="{{ site.baseurl }}/hello/" {% if page.url == "/hello/" %}class="active"{% endif %}>hello</a></li>
         <li class="has-dropdown">
             <a href="{{ site.baseurl }}/work/" {% if page.url contains "/work" or page.category == "commercial" %}class="active"{% endif %}>work</a><button class="dropdown-toggle">+</button>
             <ul class="dropdown">
@@ -72,5 +72,6 @@
         <li><a href="{{ site.baseurl }}/papers/" {% if page.url == "/papers/" %}class="active"{% endif %}>papers</a></li>
         <li><a href="{{ site.baseurl }}/talks/" {% if page.url == "/talks/" %}class="active"{% endif %}>presentations</a></li>
         <li><a href="{{ site.baseurl }}/cv/" {% if page.url == "/cv/" %}class="active"{% endif %}>cv</a></li>
+        <li><a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>about</a></li>
     </ul>
 </nav>
