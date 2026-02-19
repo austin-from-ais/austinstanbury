@@ -25,7 +25,22 @@
                     {% if page.tagline %}<p class="project-tagline">{{ page.tagline }}</p>{% endif %}
                     <p class="project-date">{{ page.year }}</p>
 
-                    {% if page.local_video %}
+                    {% if page.videos %}
+                    <div class="video-carousel">
+                        <div class="carousel-viewport">
+                            {% for vid in page.videos %}
+                            <div class="carousel-slide{% if forloop.first %} active{% endif %}">
+                                <iframe src="https://www.youtube.com/embed/{{ vid }}" allowfullscreen></iframe>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn carousel-prev">←</button>
+                            <span class="carousel-counter">1 / {{ page.videos | size }}</span>
+                            <button class="carousel-btn carousel-next">→</button>
+                        </div>
+                    </div>
+                    {% elsif page.local_video %}
                     <div class="project-video">
                         <video src="{{ site.baseurl }}/{{ page.local_video }}#t=1" controls playsinline preload="metadata"></video>
                     </div>
@@ -94,6 +109,23 @@
                 parent.classList.toggle('dropdown-open');
                 button.textContent = parent.classList.contains('dropdown-open') ? '−' : '+';
             });
+        });
+
+        // Video carousel
+        document.querySelectorAll('.video-carousel').forEach(carousel => {
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const counter = carousel.querySelector('.carousel-counter');
+            let current = 0;
+
+            function showSlide(i) {
+                slides[current].classList.remove('active');
+                current = (i + slides.length) % slides.length;
+                slides[current].classList.add('active');
+                counter.textContent = (current + 1) + ' / ' + slides.length;
+            }
+
+            carousel.querySelector('.carousel-prev').addEventListener('click', () => showSlide(current - 1));
+            carousel.querySelector('.carousel-next').addEventListener('click', () => showSlide(current + 1));
         });
     </script>
 </body>

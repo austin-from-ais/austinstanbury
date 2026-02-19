@@ -151,6 +151,30 @@ a {
     transition: opacity 0.15s ease;
 }
 
+.mosaic-thumb-cycle {
+    position: relative;
+}
+
+.cycle-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: cycle-fade 12s infinite;
+}
+
+@keyframes cycle-fade {
+    0% { opacity: 0; }
+    4% { opacity: 1; }
+    25% { opacity: 1; }
+    29% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
 .mosaic-thumb-video {
     overflow: hidden;
 }
@@ -512,6 +536,55 @@ a {
     max-width: 500px;
     aspect-ratio: 16 / 9;
     border: none;
+}
+
+/* === VIDEO CAROUSEL === */
+.video-carousel {
+    margin: 24px 0;
+    max-width: 500px;
+}
+
+.carousel-slide {
+    display: none;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.carousel-btn {
+    background: none;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    padding: 4px 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.carousel-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.carousel-counter {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
 }
 
 .project-features {

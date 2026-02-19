@@ -12,7 +12,13 @@ permalink: /work/
 <div class="project-mosaic">
     {% for project in commercial %}
     <a href="{{ project.url | prepend: site.baseurl }}" class="mosaic-card">
-        {% if project.local_video %}
+        {% if project.videos %}
+        <div class="mosaic-thumb mosaic-thumb-cycle">
+            {% for vid in project.videos %}
+            <div class="cycle-frame" style="background-image: url('https://img.youtube.com/vi/{{ vid }}/hqdefault.jpg'); animation-delay: {{ forloop.index0 | times: 3 }}s;"></div>
+            {% endfor %}
+        </div>
+        {% elsif project.local_video %}
         <div class="mosaic-thumb mosaic-thumb-video">
             <video src="{{ site.baseurl }}/{{ project.local_video }}#t=1" muted preload="metadata"></video>
         </div>

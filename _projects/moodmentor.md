@@ -6,6 +6,11 @@ tagline: VR for neurodivergent adults
 year: 2024
 date: 2024-01-01
 image: moodmentor.png
+videos:
+  - iE2RLEMOzQQ
+  - KS7I2tDd1HE
+  - wMFC3ICIM8s
+  - sQRznogjMsY
 features:
   - Mindfulness-focused VR scenario designed for adults with intellectual and developmental disabilities
   - UI/UX specifically designed for neurodivergent users, informed by clinical guidance
