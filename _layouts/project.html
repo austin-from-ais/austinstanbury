@@ -25,7 +25,11 @@
                     {% if page.tagline %}<p class="project-tagline">{{ page.tagline }}</p>{% endif %}
                     <p class="project-date">{{ page.year }}</p>
 
-                    {% if page.video %}
+                    {% if page.local_video %}
+                    <div class="project-video">
+                        <video src="{{ site.baseurl }}/{{ page.local_video }}#t=1" controls playsinline preload="metadata"></video>
+                    </div>
+                    {% elsif page.video %}
                     <div class="project-video">
                         <iframe src="https://www.youtube.com/embed/{{ page.video }}" allowfullscreen></iframe>
                     </div>

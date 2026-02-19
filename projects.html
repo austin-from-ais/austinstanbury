@@ -11,7 +11,11 @@ permalink: /work/
 <div class="project-mosaic">
     {% for project in commercial %}
     <a href="{{ project.url | prepend: site.baseurl }}" class="mosaic-card">
-        {% if project.video %}
+        {% if project.local_video %}
+        <div class="mosaic-thumb mosaic-thumb-video">
+            <video src="{{ site.baseurl }}/{{ project.local_video }}#t=1" muted preload="metadata"></video>
+        </div>
+        {% elsif project.video %}
         <div class="mosaic-thumb" style="background-image: url('https://img.youtube.com/vi/{{ project.video }}/hqdefault.jpg')"></div>
         {% elsif project.image %}
         <div class="mosaic-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.image }}')"></div>

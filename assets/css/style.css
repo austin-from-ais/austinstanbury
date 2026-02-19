@@ -151,6 +151,17 @@ a {
     transition: opacity 0.15s ease;
 }
 
+.mosaic-thumb-video {
+    overflow: hidden;
+}
+
+.mosaic-thumb-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .mosaic-card:hover .mosaic-thumb {
     opacity: 0.8;
 }
@@ -495,7 +506,8 @@ a {
     margin: 24px 0;
 }
 
-.project-video iframe {
+.project-video iframe,
+.project-video video {
     width: 100%;
     max-width: 500px;
     aspect-ratio: 16 / 9;
