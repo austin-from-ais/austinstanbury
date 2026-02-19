@@ -15,6 +15,13 @@ tech: Built in Unity with C# for Meta Quest. UI/UX design informed by clinical c
 links:
   - label: South Shore Magazine Coverage
     url: https://southshoremagazine.uberflip.com/i/1518307-ssm-spring-2024-issue/23
+highlights:
+  title: "Project Highlights:"
+  items:
+    - "Funded by the Massachusetts Department of Developmental Services"
+    - "Deployed across four Massachusetts health networks serving persons with IDD, ASD, and ABI"
+    - "Participants sustained focus for up to 10 minutes, from a baseline of 1–2 minutes"
+    - "Design research published at IEEE GEM 2024 at Politecnico di Torino"
 ---
 
 MoodMentor is a VR application designed to improve mindfulness skills in neurodivergent adults, particularly those with Autism Spectrum Disorders (ASD), intellectual and developmental disabilities (IDD), and Acquired Brain Injuries (ABI). The project was developed in collaboration with [Road to Responsibility](https://www.roadtoresponsibility.org/), a Massachusetts nonprofit founded in 1988, alongside South Shore Support Services, WORK, Inc., and the Arc of Bristol County.
