@@ -756,7 +756,7 @@ a {
     .container {
         flex-direction: column;
         padding: 32px 24px;
-        padding-right: 56px;
+        padding-left: 56px;
         gap: 40px;
     }
 
@@ -773,7 +773,7 @@ a {
         z-index: 1001;
         position: fixed;
         top: 24px;
-        right: 24px;
+        left: 24px;
     }
 
     .hamburger span {
