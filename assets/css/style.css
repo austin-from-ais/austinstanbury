@@ -57,6 +57,10 @@ a {
     display: none;
 }
 
+.mobile-top-fade {
+    display: none;
+}
+
 .nav ul {
     list-style: none;
 }
@@ -765,16 +769,30 @@ a {
         flex-direction: column;
         justify-content: center;
         gap: 5px;
-        background: var(--color-bg);
+        background: none;
         border: none;
         cursor: pointer;
-        padding: 10px;
-        border-radius: 4px;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+        padding: 8px;
         z-index: 1001;
         position: fixed;
-        top: 20px;
-        left: 20px;
+        top: 24px;
+        left: 24px;
+    }
+
+    .content {
+        padding-top: 48px;
+    }
+
+    .mobile-top-fade {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        background: linear-gradient(to bottom, var(--color-bg) 50%, transparent);
+        z-index: 1000;
+        pointer-events: none;
     }
 
     .hamburger span {
