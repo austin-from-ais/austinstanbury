@@ -39,10 +39,16 @@ permalink: /
     </div>
 
     <div class="hello-videos">
-        <video src="{{ site.baseurl }}/assets/video/austin1.mp4" muted autoplay loop playsinline></video>
-        <video src="{{ site.baseurl }}/assets/video/austin2.mp4" muted autoplay loop playsinline></video>
-        <video src="{{ site.baseurl }}/assets/video/austin3.mp4" muted autoplay loop playsinline></video>
+        <video src="{{ site.baseurl }}/assets/video/austin1.mp4" muted autoplay loop playsinline webkit-playsinline></video>
+        <video src="{{ site.baseurl }}/assets/video/austin2.mp4" muted autoplay loop playsinline webkit-playsinline></video>
+        <video src="{{ site.baseurl }}/assets/video/austin3.mp4" muted autoplay loop playsinline webkit-playsinline></video>
     </div>
+    <script>
+    document.querySelectorAll('.hello-videos video').forEach(v => {
+        v.muted = true;
+        v.play().catch(() => {});
+    });
+    </script>
 
     <div class="hello-section">
         <h2>featured work</h2>
