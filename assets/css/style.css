@@ -756,7 +756,6 @@ a {
     .container {
         flex-direction: column;
         padding: 32px 24px;
-        padding-left: 56px;
         gap: 40px;
     }
 
@@ -848,20 +847,6 @@ a {
 
     .project-mosaic {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hello-stats {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px 16px;
-    }
-
-    .stat-number {
-        font-size: 1.25rem;
-    }
-
-    .stat-label {
-        font-size: 0.6875rem;
     }
 }
 
@@ -1133,4 +1118,21 @@ a {
     font-size: 0.8125rem;
     color: var(--color-text-light);
     margin-top: 2px;
+}
+
+/* === MOBILE HELLO OVERRIDES (must come after base hello styles) === */
+@media (max-width: 700px) {
+    .hello-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 16px;
+    }
+
+    .stat-number {
+        font-size: 1.25rem;
+    }
+
+    .stat-label {
+        font-size: 0.6875rem;
+    }
 }
