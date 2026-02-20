@@ -5,6 +5,7 @@ short_title: Bartow Murals
 tagline: Location-based AR experiences overlaid onto public murals across Bartow, Florida
 year: 2025
 date: 2025-01-01
+local_video: assets/video/bartow.mp4
 image: bartow.png
 features:
   - Four interactive AR experiences anchored to public mural sites across the city
