@@ -5,7 +5,7 @@
         <span></span>
     </button>
     <ul>
-        <li><a href="{{ site.baseurl }}/hello/" {% if page.url == "/hello/" %}class="active"{% endif %}>hello!</a></li>
+        <li><a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>hello!</a></li>
         <li class="has-dropdown">
             <a href="{{ site.baseurl }}/work/" {% if page.url contains "/work" or page.category == "commercial" %}class="active"{% endif %}>work</a><button class="dropdown-toggle">+</button>
             <ul class="dropdown">
@@ -77,6 +77,6 @@
         <li><a href="{{ site.baseurl }}/awards/" {% if page.url == "/awards/" %}class="active"{% endif %}>awards</a></li>
         <li><a href="{{ site.baseurl }}/news/" {% if page.url == "/news/" %}class="active"{% endif %}>news</a></li>
         <li><a href="{{ site.baseurl }}/cv/" {% if page.url == "/cv/" %}class="active"{% endif %}>cv</a></li>
-        <li><a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>about</a></li>
+        <li><a href="{{ site.baseurl }}/about/" {% if page.url == "/about/" %}class="active"{% endif %}>about</a></li>
     </ul>
 </nav>
