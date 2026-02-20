@@ -39,15 +39,42 @@ permalink: /
     </div>
 
     <div class="hello-videos">
-        <video src="{{ site.baseurl }}/assets/video/austin1.mp4" muted autoplay loop playsinline webkit-playsinline></video>
-        <video src="{{ site.baseurl }}/assets/video/austin2.mp4" muted autoplay loop playsinline webkit-playsinline></video>
-        <video src="{{ site.baseurl }}/assets/video/austin3.mp4" muted autoplay loop playsinline webkit-playsinline></video>
+        <video muted autoplay loop playsinline webkit-playsinline preload="metadata">
+            <source src="{{ site.baseurl }}/assets/video/austin1.mp4" type="video/mp4">
+        </video>
+        <video muted autoplay loop playsinline webkit-playsinline preload="metadata">
+            <source src="{{ site.baseurl }}/assets/video/austin2.mp4" type="video/mp4">
+        </video>
+        <video muted autoplay loop playsinline webkit-playsinline preload="metadata">
+            <source src="{{ site.baseurl }}/assets/video/austin3.mp4" type="video/mp4">
+        </video>
     </div>
     <script>
-    document.querySelectorAll('.hello-videos video').forEach(v => {
-        v.muted = true;
-        v.play().catch(() => {});
-    });
+    (function() {
+        var videos = document.querySelectorAll('.hello-videos video');
+        function tryPlay() {
+            videos.forEach(function(v) {
+                v.muted = true;
+                var p = v.play();
+                if (p !== undefined) {
+                    p.catch(function() {});
+                }
+            });
+        }
+        if (document.readyState === 'complete') {
+            tryPlay();
+        } else {
+            window.addEventListener('load', tryPlay);
+        }
+        document.addEventListener('touchstart', function once() {
+            tryPlay();
+            document.removeEventListener('touchstart', once);
+        });
+        document.addEventListener('scroll', function once() {
+            tryPlay();
+            document.removeEventListener('scroll', once);
+        });
+    })();
     </script>
 
     <div class="hello-section">
