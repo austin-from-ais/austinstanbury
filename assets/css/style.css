@@ -853,15 +853,15 @@ a {
     .hello-stats {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-    }
-
-    .stat-card {
-        min-width: 0;
+        gap: 20px 16px;
     }
 
     .stat-number {
         font-size: 1.25rem;
+    }
+
+    .stat-label {
+        font-size: 0.6875rem;
     }
 }
 
