@@ -40,7 +40,9 @@
                         <iframe src="https://www.youtube.com/embed/{{ page.video }}" allowfullscreen></iframe>
                     </div>
                     {% elsif page.demo %}
-                    <img src="{{ site.baseurl }}/assets/images/{{ page.demo }}" alt="{{ page.title }}" class="project-image">
+                    <div class="project-video">
+                        <video src="{{ site.baseurl }}/{{ page.demo }}" autoplay loop muted playsinline></video>
+                    </div>
                     {% elsif page.image %}
                     <img src="{{ site.baseurl }}/assets/images/{{ page.image }}" alt="{{ page.title }}" class="project-image">
                     {% endif %}

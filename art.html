@@ -16,7 +16,9 @@ permalink: /art/
     {% for artwork in installations %}
     <a href="{{ artwork.url | prepend: site.baseurl }}" class="mosaic-card">
         {% if artwork.demo %}
-        <div class="mosaic-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ artwork.demo }}')"></div>
+        <div class="mosaic-thumb mosaic-thumb-video">
+            <video src="{{ site.baseurl }}/{{ artwork.demo }}" muted autoplay loop playsinline></video>
+        </div>
         {% elsif artwork.video %}
         <div class="mosaic-thumb" style="background-image: url('https://img.youtube.com/vi/{{ artwork.video }}/hqdefault.jpg')"></div>
         {% elsif artwork.image %}

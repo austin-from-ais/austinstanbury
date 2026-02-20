@@ -5,7 +5,7 @@ short_title: Shadows of Tomorrow
 tagline: Immersive climate change narrative using extended reality
 year: 2024
 image: shadowsoftomorrow.png
-demo: shadows.gif
+demo: assets/video/shadows.mp4
 video: o6H-NFY4dH0
 award:
   - "MIT Reality Hack Art Grant"
