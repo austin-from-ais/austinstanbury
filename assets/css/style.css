@@ -789,8 +789,8 @@ a {
         top: 0;
         left: 0;
         right: 0;
-        height: 64px;
-        background: linear-gradient(to bottom, var(--color-bg) 50%, transparent);
+        height: 80px;
+        background: linear-gradient(to bottom, var(--color-bg) 65%, transparent);
         z-index: 1000;
         pointer-events: none;
     }
