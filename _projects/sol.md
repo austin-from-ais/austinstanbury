@@ -5,7 +5,7 @@ short_title: Sol
 tagline: Interactive holographic solar system education for Microsoft HoloLens
 year: 2022
 date: 2022-01-02
-image: sol.png
+image: sol.avif
 features:
   - Narrated holographic lessons for all eight planets, Pluto, the Sun, and major meteor/asteroid objects
   - Two modes — guided tour with linear narrated walkthrough and freeplay for open exploration
