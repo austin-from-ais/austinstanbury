@@ -20,7 +20,7 @@ permalink: /work/
         </div>
         {% elsif project.local_video %}
         <div class="mosaic-thumb mosaic-thumb-video">
-            <video src="{{ site.baseurl }}/{{ project.local_video }}#t=1" muted preload="metadata"></video>
+            <video src="{{ site.baseurl }}/{{ project.local_video }}" muted autoplay loop playsinline></video>
         </div>
         {% elsif project.demo %}
         <div class="mosaic-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.demo }}')"></div>
