@@ -52,6 +52,11 @@ a {
     flex-shrink: 0;
 }
 
+/* === HAMBURGER (hidden on desktop) === */
+.hamburger {
+    display: none;
+}
+
 .nav ul {
     list-style: none;
 }
@@ -434,16 +439,7 @@ a {
     color: var(--color-accent);
 }
 
-/* Mobile dropdown */
-@media (max-width: 700px) {
-    .has-dropdown.dropdown-open .dropdown {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4px 12px;
-        padding: 8px 0 0 0;
-        width: 100%;
-    }
-}
+/* Mobile dropdown - handled in main responsive block */
 
 /* === PROJECT DETAIL PAGE === */
 .project-detail {
@@ -762,23 +758,88 @@ a {
         padding: 32px 24px;
         gap: 40px;
     }
-    
-    .nav {
-        position: relative;
-        top: 0;
-        width: 100%;
-    }
-    
-    .nav ul {
+
+    /* Hamburger button */
+    .hamburger {
         display: flex;
-        flex-wrap: wrap;
-        gap: 4px 16px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        z-index: 1001;
+        position: fixed;
+        top: 24px;
+        right: 24px;
     }
-    
+
+    .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--color-text);
+        transition: all 0.3s ease;
+    }
+
+    .nav.nav-open .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav.nav-open .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav.nav-open .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Nav overlay */
+    .nav {
+        position: static;
+        width: auto;
+    }
+
+    .nav > ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--color-bg);
+        z-index: 1000;
+        flex-direction: column;
+        padding: 72px 32px 32px;
+        overflow-y: auto;
+        gap: 0;
+    }
+
+    .nav.nav-open > ul {
+        display: flex;
+    }
+
     .nav li {
-        margin-bottom: 0;
+        margin-bottom: 4px;
     }
-    
+
+    .nav > ul > li > a {
+        font-size: 1.125rem;
+        padding: 8px 0;
+        display: inline-block;
+    }
+
+    /* Dropdowns in mobile menu */
+    .has-dropdown.dropdown-open .dropdown {
+        display: block;
+        padding: 4px 0 8px 16px;
+    }
+
+    .dropdown a {
+        padding: 4px 0;
+    }
+
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;

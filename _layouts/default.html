@@ -28,6 +28,21 @@
                 button.textContent = parent.classList.contains('dropdown-open') ? '−' : '+';
             });
         });
+
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('nav-open');
+            });
+            // Close menu when a non-dropdown link is clicked
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('nav-open');
+                });
+            });
+        }
     </script>
 </body>
 </html>

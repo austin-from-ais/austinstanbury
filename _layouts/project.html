@@ -113,6 +113,20 @@
             });
         });
 
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('nav-open');
+            });
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('nav-open');
+                });
+            });
+        }
+
         // Video carousel
         document.querySelectorAll('.video-carousel').forEach(carousel => {
             const slides = carousel.querySelectorAll('.carousel-slide');
