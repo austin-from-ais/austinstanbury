@@ -3,8 +3,11 @@ category: commercial
 title: Fort De Soto AR Reconstructions
 short_title: Fort De Soto
 tagline: Reconstructing lost historical structures at Fort De Soto Park through location-based augmented reality
+status: prototype
 year: 2024
 date: 2024-01-01
+video: Xi-SD6-OYWE
+thumb: fortdesoto-thumb.jpg
 image: fortdesoto.png
 features:
   - 3D AR reconstructions of three historically significant structures placed at their original locations
