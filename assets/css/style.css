@@ -765,14 +765,16 @@ a {
         flex-direction: column;
         justify-content: center;
         gap: 5px;
-        background: none;
+        background: var(--color-bg);
         border: none;
         cursor: pointer;
-        padding: 8px;
+        padding: 10px;
+        border-radius: 4px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.1);
         z-index: 1001;
         position: fixed;
-        top: 24px;
-        left: 24px;
+        top: 20px;
+        left: 20px;
     }
 
     .hamburger span {
