@@ -9,7 +9,7 @@ demo: assets/video/cr.mp4
 video: ectvq_9PRJg
 award: "Arts for UF Vaccine Confidence Program"
 award_line:
-  - "$12,000 grant — UF Center for Arts in Medicine"
+  - "$10,000 grant — UF Center for Arts in Medicine"
   - "Arts for UF Vaccine Confidence Program"
   - "Published at ACM VRST 2022"
 features:
