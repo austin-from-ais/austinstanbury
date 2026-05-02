@@ -1,41 +1,36 @@
 ---
 layout: default
-title: Work
-permalink: /work/
+title: Projects
+permalink: /projects/
 ---
 
-<h1>work</h1>
+<h1>projects</h1>
 
-<p class="work-company-link" style="margin-top: 1.5rem;">Founder & CEO of Augmented Info Systems</p>
-<p style="margin-top: 0.25rem;"><a href="https://augmentedinfosystems.com" target="_blank" style="color: var(--color-accent); font-size: 0.85rem;">www.augmentedinfosystems.com</a></p>
+{% assign hackathon = site.projects | where: "category", "hackathon" | sort: "year" | reverse %}
+{% assign gradschool = site.projects | where: "category", "grad-school" | sort: "date" | reverse %}
 
-{% assign commercial = site.projects | where: "category", "commercial" | sort: "date" | reverse %}
-
-<h2 class="project-category">commercial projects</h2>
+{% if hackathon.size > 0 %}
+<h2 class="project-category">hackathon</h2>
 <div class="project-mosaic">
-    {% for project in commercial %}
+    {% for project in hackathon %}
     <a href="{{ project.url | prepend: site.baseurl }}" class="mosaic-card">
-        {% if project.videos %}
-        <div class="mosaic-thumb mosaic-thumb-cycle">
-            {% for vid in project.videos %}
-            <div class="cycle-frame" style="background-image: url('https://img.youtube.com/vi/{{ vid }}/hqdefault.jpg'); animation-delay: {{ forloop.index0 | times: 3 }}s;"></div>
-            {% endfor %}
+        {% include media-thumb.html item=project %}
+        <div class="mosaic-info">
+            <p class="mosaic-title">{{ project.title }}</p>
+            <p class="mosaic-meta">{{ project.year }}</p>
+            {% if project.award %}<p class="mosaic-award">{{ project.award }}</p>{% endif %}
         </div>
-        {% elsif project.local_video %}
-        <div class="mosaic-thumb mosaic-thumb-video">
-            <video src="{{ site.baseurl }}/{{ project.local_video }}" muted autoplay loop playsinline></video>
-        </div>
-        {% elsif project.demo %}
-        <div class="mosaic-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.demo }}')"></div>
-        {% elsif project.thumb %}
-        <div class="mosaic-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.thumb }}')"></div>
-        {% elsif project.video %}
-        <div class="mosaic-thumb" style="background-image: url('https://img.youtube.com/vi/{{ project.video }}/hqdefault.jpg')"></div>
-        {% elsif project.image %}
-        <div class="mosaic-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ project.image }}')"></div>
-        {% else %}
-        <div class="mosaic-thumb no-image"></div>
-        {% endif %}
+    </a>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% if gradschool.size > 0 %}
+<h2 class="project-category">grad school</h2>
+<div class="project-mosaic">
+    {% for project in gradschool %}
+    <a href="{{ project.url | prepend: site.baseurl }}" class="mosaic-card">
+        {% include media-thumb.html item=project %}
         <div class="mosaic-info">
             <p class="mosaic-title">{{ project.title }}</p>
             <p class="mosaic-meta">{{ project.year }}</p>
@@ -43,67 +38,4 @@ permalink: /work/
     </a>
     {% endfor %}
 </div>
-
-<div class="hello-section work-subsection">
-    <h2>partner organizations</h2>
-    <ul class="hello-collabs">
-        <li>
-            <p class="hello-collab-name">University of Florida</p>
-            <p class="hello-collab-detail">Herbert Wertheim College of Engineering · Digital Worlds Institute · Florida Semiconductor Institute</p>
-        </li>
-        <li>
-            <p class="hello-collab-name">Purdue University</p>
-            <p class="hello-collab-detail">SCALE initiative · Microelectronics workforce development</p>
-        </li>
-        <li>
-            <p class="hello-collab-name">Access3D Lab, University of South Florida</p>
-            <p class="hello-collab-detail">Dr. Laura Harrison · Fort De Soto AR · Bartow AR Murals</p>
-        </li>
-        <li>
-            <p class="hello-collab-name">Road to Responsibility</p>
-            <p class="hello-collab-detail">Massachusetts DDS · MoodMentor VR deployment</p>
-        </li>
-        <li>
-            <p class="hello-collab-name">Industry Partners</p>
-            <p class="hello-collab-detail">Micron · AMD · Intel · GlobalFoundries · NHanced · SkyWater · Lockheed Martin</p>
-        </li>
-    </ul>
-</div>
-
-<div class="hello-section work-subsection">
-    <h2>key collaborators</h2>
-    <ul class="hello-collabs">
-        <li>
-            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/hyo-kang-245bbb252/" target="_blank">Dr. Hyo Jeong Kang</a></p>
-            <p class="hello-collab-detail">Virtual Pedagogical Agents · HoloKeys · Shadows of Tomorrow · 6 co-authored publications</p>
-        </li>
-        <li>
-            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/navid-asadi-326ab732/" target="_blank">Dr. Navid Asadi</a></p>
-            <p class="hello-collab-detail">Virtual Pedagogical Agents · PATHS Program · co-authored publications</p>
-        </li>
-        <li>
-            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/harrisonlkh/" target="_blank">Dr. Laura Harrison</a></p>
-            <p class="hello-collab-detail">Access3D Lab, USF · Bartow AR Murals · Fort De Soto AR Reconstructions</p>
-        </li>
-        <li>
-            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/nigel-newbutt-27a86921/" target="_blank">Dr. Nigel Newbutt</a></p>
-            <p class="hello-collab-detail">PATHS Program · Neurodivergent workforce development</p>
-        </li>
-        <li>
-            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/chris-white-ed-d-43025015/" target="_blank">Chris White, Ed.D.</a></p>
-            <p class="hello-collab-detail">MoodMentor Suite · Road to Responsibility</p>
-        </li>
-        <li>
-            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/serene-cheon/" target="_blank">Serene Cheon</a></p>
-            <p class="hello-collab-detail">Virtual Pedagogical Agents · 3 co-authored publications including CHI '26</p>
-        </li>
-        <li>
-            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/juanlam/" target="_blank">Juan Francisco Lam</a></p>
-            <p class="hello-collab-detail">Virtual Pedagogical Agents · Infinite Particularity · co-authored publications</p>
-        </li>
-        <li>
-            <p class="hello-collab-name"><a href="https://www.linkedin.com/in/logankemper/" target="_blank">Logan Kemper</a></p>
-            <p class="hello-collab-detail">Virtual Pedagogical Agents</p>
-        </li>
-    </ul>
-</div>
+{% endif %}

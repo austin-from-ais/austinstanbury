@@ -45,11 +45,9 @@
                 {% endif %}
 
                 <li class="dropdown-label">collage</li>
-                <li><a href="{{ site.baseurl }}/art/#collage">Creation of Eve</a></li>
-                <li><a href="{{ site.baseurl }}/art/#collage">How These Things End</a></li>
-                <li><a href="{{ site.baseurl }}/art/#collage">Living</a></li>
-                <li><a href="{{ site.baseurl }}/art/#collage">Miracle</a></li>
-                <li><a href="{{ site.baseurl }}/art/#collage">Pandemonium</a></li>
+                {% for piece in site.data.collage %}
+                <li><a href="{{ site.baseurl }}/art/#collage">{{ piece.title }}</a></li>
+                {% endfor %}
             </ul>
         </li>
         <li class="has-dropdown">

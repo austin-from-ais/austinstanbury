@@ -1,0 +1,29 @@
+{%- comment -%}
+Renders a mosaic-thumb element for a project or artwork.
+Usage: {% include media-thumb.html item=project %}
+Precedence: videos → local_video → demo → thumb → video → image → no-image
+{%- endcomment -%}
+{%- assign item = include.item -%}
+{%- if item.videos -%}
+<div class="mosaic-thumb mosaic-thumb-cycle">
+    {%- for vid in item.videos -%}
+    <div class="cycle-frame" style="background-image: url('https://img.youtube.com/vi/{{ vid }}/hqdefault.jpg'); animation-delay: {{ forloop.index0 | times: 3 }}s;"></div>
+    {%- endfor -%}
+</div>
+{%- elsif item.local_video -%}
+<div class="mosaic-thumb mosaic-thumb-video">
+    <video src="{{ site.baseurl }}/{{ item.local_video }}" muted autoplay loop playsinline></video>
+</div>
+{%- elsif item.demo -%}
+<div class="mosaic-thumb mosaic-thumb-video">
+    <video src="{{ site.baseurl }}/{{ item.demo }}" muted autoplay loop playsinline></video>
+</div>
+{%- elsif item.thumb -%}
+<div class="mosaic-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ item.thumb }}')"></div>
+{%- elsif item.video -%}
+<div class="mosaic-thumb" style="background-image: url('https://img.youtube.com/vi/{{ item.video }}/hqdefault.jpg')"></div>
+{%- elsif item.image -%}
+<div class="mosaic-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ item.image }}')"></div>
+{%- else -%}
+<div class="mosaic-thumb no-image"></div>
+{%- endif -%}

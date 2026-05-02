@@ -1,148 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} — Austin Stanbury</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css?v=8">
-</head>
-<body>
-    <div class="container">
-        {% include nav.html %}
+---
+layout: default
+---
+<article class="project-detail">
+    <header class="project-header">
+        {% if page.category == "commercial" %}
+        <a href="{{ site.baseurl }}/work/" class="back-link">← back to work</a>
+        {% else %}
+        <a href="{{ site.baseurl }}/projects/" class="back-link">← back to projects</a>
+        {% endif %}
+        <h1>{{ page.title }}</h1>
+        {% if page.tagline %}<p class="project-tagline">{{ page.tagline }}</p>{% endif %}
+        <p class="project-date">{{ page.year }}{% if page.status %} · {{ page.status }}{% endif %}</p>
 
-        <main class="content">
-            <article class="project-detail">
-                <header class="project-header">
-                    {% if page.category == "commercial" %}
-                    <a href="{{ site.baseurl }}/work/" class="back-link">← back to work</a>
-                    {% else %}
-                    <a href="{{ site.baseurl }}/projects/" class="back-link">← back to projects</a>
-                    {% endif %}
-                    <h1>{{ page.title }}</h1>
-                    {% if page.tagline %}<p class="project-tagline">{{ page.tagline }}</p>{% endif %}
-                    <p class="project-date">{{ page.year }}{% if page.status %} · {{ page.status }}{% endif %}</p>
+        {% include media-hero.html item=page %}
+    </header>
 
-                    {% if page.videos %}
-                    <div class="video-carousel">
-                        <div class="carousel-viewport">
-                            {% for vid in page.videos %}
-                            <div class="carousel-slide{% if forloop.first %} active{% endif %}">
-                                <iframe src="https://www.youtube.com/embed/{{ vid }}" allowfullscreen></iframe>
-                            </div>
-                            {% endfor %}
-                        </div>
-                        <div class="carousel-controls">
-                            <button class="carousel-btn carousel-prev">←</button>
-                            <span class="carousel-counter">1 / {{ page.videos | size }}</span>
-                            <button class="carousel-btn carousel-next">→</button>
-                        </div>
-                    </div>
-                    {% elsif page.local_video %}
-                    <div class="project-video">
-                        <video src="{{ site.baseurl }}/{{ page.local_video }}#t=1" controls playsinline preload="metadata"></video>
-                    </div>
-                    {% elsif page.video %}
-                    <div class="project-video">
-                        <iframe src="https://www.youtube.com/embed/{{ page.video }}" allowfullscreen></iframe>
-                    </div>
-                    {% elsif page.demo %}
-                    <img src="{{ site.baseurl }}/assets/images/{{ page.demo }}" alt="{{ page.title }}" class="project-image">
-                    {% elsif page.image %}
-                    <img src="{{ site.baseurl }}/assets/images/{{ page.image }}" alt="{{ page.title }}" class="project-image">
-                    {% endif %}
-                </header>
+    <div class="project-body">
+        {% if page.highlights %}
+        <div class="project-highlights">
+            <h3>{{ page.highlights.title }}</h3>
+            <ul>
+                {% for item in page.highlights.items %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
 
-                <div class="project-body">
-                    {% if page.highlights %}
-                    <div class="project-highlights">
-                        <h3>{{ page.highlights.title }}</h3>
-                        <ul>
-                            {% for item in page.highlights.items %}
-                            <li>{{ item }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% endif %}
+        {% if page.note %}
+        <div class="project-note">
+            <p><strong>Note:</strong> {{ page.note }}</p>
+        </div>
+        {% endif %}
 
-                    {% if page.note %}
-                    <div class="project-note">
-                        <p><strong>Note:</strong> {{ page.note }}</p>
-                    </div>
-                    {% endif %}
+        {{ content }}
 
-                    {{ content }}
+        {% if page.features %}
+        <h2>key features</h2>
+        <ul class="project-features">
+            {% for feature in page.features %}
+            <li>{{ feature }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
 
-                    {% if page.features %}
-                    <h2>key features</h2>
-                    <ul class="project-features">
-                        {% for feature in page.features %}
-                        <li>{{ feature }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
+        {% if page.tech %}
+        <h2>technical details</h2>
+        <p>{{ page.tech }}</p>
+        {% endif %}
 
-                    {% if page.tech %}
-                    <h2>technical details</h2>
-                    <p>{{ page.tech }}</p>
-                    {% endif %}
-
-                    {% if page.links %}
-                    <h2>links</h2>
-                    <ul class="project-links">
-                        {% for link in page.links %}
-                        <li><a href="{{ link.url }}" target="_blank">{{ link.label }} →</a></li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </div>
-            </article>
-        </main>
+        {% if page.links %}
+        <h2>links</h2>
+        <ul class="project-links">
+            {% for link in page.links %}
+            <li><a href="{{ link.url }}" target="_blank">{{ link.label }} →</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
     </div>
-
-    <script>
-        // Dropdown toggle on + button click only
-        document.querySelectorAll('.dropdown-toggle').forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                const parent = button.parentElement;
-                parent.classList.toggle('dropdown-open');
-                button.textContent = parent.classList.contains('dropdown-open') ? '−' : '+';
-            });
-        });
-
-        // Hamburger menu toggle
-        const hamburger = document.querySelector('.hamburger');
-        const nav = document.querySelector('.nav');
-        if (hamburger) {
-            hamburger.addEventListener('click', () => {
-                nav.classList.toggle('nav-open');
-            });
-            nav.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    nav.classList.remove('nav-open');
-                });
-            });
-        }
-
-        // Video carousel
-        document.querySelectorAll('.video-carousel').forEach(carousel => {
-            const slides = carousel.querySelectorAll('.carousel-slide');
-            const counter = carousel.querySelector('.carousel-counter');
-            let current = 0;
-
-            function showSlide(i) {
-                slides[current].classList.remove('active');
-                current = (i + slides.length) % slides.length;
-                slides[current].classList.add('active');
-                counter.textContent = (current + 1) + ' / ' + slides.length;
-            }
-
-            carousel.querySelector('.carousel-prev').addEventListener('click', () => showSlide(current - 1));
-            carousel.querySelector('.carousel-next').addEventListener('click', () => showSlide(current + 1));
-        });
-    </script>
-</body>
-</html>
+</article>

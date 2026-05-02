@@ -1,119 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} — Austin Stanbury</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css?v=8">
-</head>
-<body>
-    <div class="container">
-        {% include nav.html %}
+---
+layout: default
+---
+<article class="project-detail">
+    <header class="project-header">
+        <a href="{{ site.baseurl }}/art/" class="back-link">← back to art</a>
+        <h1>{{ page.title }}</h1>
+        {% if page.tagline %}<p class="project-tagline">{{ page.tagline }}</p>{% endif %}
+        <p class="project-date">{{ page.year }}</p>
 
-        <main class="content">
-            <article class="project-detail">
-                <header class="project-header">
-                    <a href="{{ site.baseurl }}/art/" class="back-link">← back to art</a>
-                    <h1>{{ page.title }}</h1>
-                    {% if page.tagline %}<p class="project-tagline">{{ page.tagline }}</p>{% endif %}
-                    <p class="project-date">{{ page.year }}</p>
+        {% if page.website %}
+        <p class="project-website"><a href="{{ page.website }}" target="_blank">{{ page.website }} →</a></p>
+        {% endif %}
 
-                    {% if page.website %}
-                    <p class="project-website"><a href="{{ page.website }}" target="_blank">{{ page.website }} →</a></p>
-                    {% endif %}
+        {% if page.award_line %}
+        {% if page.award_line.first %}
+        {% for line in page.award_line %}
+        <p class="project-award-line">{{ line }}</p>
+        {% endfor %}
+        {% else %}
+        <p class="project-award-line">{{ page.award_line }}</p>
+        {% endif %}
+        {% endif %}
 
-                    {% if page.award_line %}
-                    {% if page.award_line.first %}
-                    {% for line in page.award_line %}
-                    <p class="project-award-line">{{ line }}</p>
-                    {% endfor %}
-                    {% else %}
-                    <p class="project-award-line">{{ page.award_line }}</p>
-                    {% endif %}
-                    {% endif %}
+        {% include media-hero.html item=page %}
+    </header>
 
-                    {% if page.video %}
-                    <div class="project-video">
-                        <iframe src="https://www.youtube.com/embed/{{ page.video }}" allowfullscreen></iframe>
-                    </div>
-                    {% elsif page.demo %}
-                    <div class="project-video">
-                        <video src="{{ site.baseurl }}/{{ page.demo }}" autoplay loop muted playsinline></video>
-                    </div>
-                    {% elsif page.image %}
-                    <img src="{{ site.baseurl }}/assets/images/{{ page.image }}" alt="{{ page.title }}" class="project-image">
-                    {% endif %}
-                </header>
+    <div class="project-body">
+        {% if page.note %}
+        <div class="project-note">
+            <p><strong>Note:</strong> {{ page.note }}</p>
+        </div>
+        {% endif %}
 
-                <div class="project-body">
-                    {% if page.note %}
-                    <div class="project-note">
-                        <p><strong>Note:</strong> {{ page.note }}</p>
-                    </div>
-                    {% endif %}
+        {{ content }}
 
-                    {{ content }}
+        {% if page.features %}
+        <h2>key features</h2>
+        <ul class="project-features">
+            {% for feature in page.features %}
+            <li>{{ feature }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
 
-                    {% if page.video %}
-                    <div class="project-video">
-                        <iframe src="https://www.youtube.com/embed/{{ page.video }}" allowfullscreen></iframe>
-                    </div>
-                    {% endif %}
+        {% if page.tech %}
+        <h2>technical details</h2>
+        <p>{{ page.tech }}</p>
+        {% endif %}
 
-                    {% if page.features %}
-                    <h2>key features</h2>
-                    <ul class="project-features">
-                        {% for feature in page.features %}
-                        <li>{{ feature }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-
-                    {% if page.tech %}
-                    <h2>technical details</h2>
-                    <p>{{ page.tech }}</p>
-                    {% endif %}
-
-                    {% if page.links %}
-                    <h2>links</h2>
-                    <ul class="project-links">
-                        {% for link in page.links %}
-                        <li><a href="{{ link.url }}" target="_blank">{{ link.label }} →</a></li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </div>
-            </article>
-        </main>
+        {% if page.links %}
+        <h2>links</h2>
+        <ul class="project-links">
+            {% for link in page.links %}
+            <li><a href="{{ link.url }}" target="_blank">{{ link.label }} →</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
     </div>
-
-    <script>
-        // Dropdown toggle on + button click only
-        document.querySelectorAll('.dropdown-toggle').forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                const parent = button.parentElement;
-                parent.classList.toggle('dropdown-open');
-                button.textContent = parent.classList.contains('dropdown-open') ? '−' : '+';
-            });
-        });
-
-        // Hamburger menu toggle
-        const hamburger = document.querySelector('.hamburger');
-        const nav = document.querySelector('.nav');
-        if (hamburger) {
-            hamburger.addEventListener('click', () => {
-                nav.classList.toggle('nav-open');
-            });
-            nav.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    nav.classList.remove('nav-open');
-                });
-            });
-        }
-    </script>
-</body>
-</html>
+</article>

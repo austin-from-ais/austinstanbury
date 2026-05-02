@@ -15,17 +15,7 @@ permalink: /art/
 <div class="project-mosaic">
     {% for artwork in installations %}
     <a href="{{ artwork.url | prepend: site.baseurl }}" class="mosaic-card">
-        {% if artwork.demo %}
-        <div class="mosaic-thumb mosaic-thumb-video">
-            <video src="{{ site.baseurl }}/{{ artwork.demo }}" muted autoplay loop playsinline></video>
-        </div>
-        {% elsif artwork.video %}
-        <div class="mosaic-thumb" style="background-image: url('https://img.youtube.com/vi/{{ artwork.video }}/hqdefault.jpg')"></div>
-        {% elsif artwork.image %}
-        <div class="mosaic-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ artwork.image }}')"></div>
-        {% else %}
-        <div class="mosaic-thumb no-image"></div>
-        {% endif %}
+        {% include media-thumb.html item=artwork %}
         <div class="mosaic-info">
             <p class="mosaic-title">{{ artwork.title }}</p>
             <p class="mosaic-meta">{{ artwork.year }}</p>
@@ -84,26 +74,12 @@ permalink: /art/
 
 <h2 class="project-category" id="collage">collage</h2>
 <div class="collage-grid">
-    <a href="{{ site.baseurl }}/assets/images/collage/creation-of-eve.jpg" target="_blank" class="collage-item">
-        <img src="{{ site.baseurl }}/assets/images/collage/creation-of-eve.jpg" alt="Creation of Eve">
-        <p class="project-title">Creation of Eve</p>
+    {% for piece in site.data.collage %}
+    <a href="{{ site.baseurl }}/assets/images/collage/{{ piece.image }}" target="_blank" class="collage-item">
+        <img src="{{ site.baseurl }}/assets/images/collage/{{ piece.image }}" alt="{{ piece.title }}">
+        <p class="project-title">{{ piece.title }}</p>
     </a>
-    <a href="{{ site.baseurl }}/assets/images/collage/how-these-things-end.jpg" target="_blank" class="collage-item">
-        <img src="{{ site.baseurl }}/assets/images/collage/how-these-things-end.jpg" alt="How These Things End">
-        <p class="project-title">How These Things End</p>
-    </a>
-    <a href="{{ site.baseurl }}/assets/images/collage/living.jpg" target="_blank" class="collage-item">
-        <img src="{{ site.baseurl }}/assets/images/collage/living.jpg" alt="Living">
-        <p class="project-title">Living</p>
-    </a>
-    <a href="{{ site.baseurl }}/assets/images/collage/miracle.jpg" target="_blank" class="collage-item">
-        <img src="{{ site.baseurl }}/assets/images/collage/miracle.jpg" alt="Miracle">
-        <p class="project-title">Miracle</p>
-    </a>
-    <a href="{{ site.baseurl }}/assets/images/collage/pandemonium.jpg" target="_blank" class="collage-item">
-        <img src="{{ site.baseurl }}/assets/images/collage/pandemonium.jpg" alt="Pandemonium">
-        <p class="project-title">Pandemonium</p>
-    </a>
+    {% endfor %}
 </div>
 
 <h2 class="project-category">exhibitions</h2>

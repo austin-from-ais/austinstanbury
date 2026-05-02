@@ -1,0 +1,36 @@
+{%- comment -%}
+Renders the hero media for a project or artwork detail page.
+Usage: {% include media-hero.html item=page %}
+Precedence: videos (carousel) → local_video → video → demo → image
+{%- endcomment -%}
+{%- assign item = include.item -%}
+{%- if item.videos -%}
+<div class="video-carousel">
+    <div class="carousel-viewport">
+        {%- for vid in item.videos -%}
+        <div class="carousel-slide{% if forloop.first %} active{% endif %}">
+            <iframe src="https://www.youtube.com/embed/{{ vid }}" allowfullscreen></iframe>
+        </div>
+        {%- endfor -%}
+    </div>
+    <div class="carousel-controls">
+        <button class="carousel-btn carousel-prev">←</button>
+        <span class="carousel-counter">1 / {{ item.videos | size }}</span>
+        <button class="carousel-btn carousel-next">→</button>
+    </div>
+</div>
+{%- elsif item.local_video -%}
+<div class="project-video">
+    <video src="{{ site.baseurl }}/{{ item.local_video }}#t=1" controls playsinline preload="metadata"></video>
+</div>
+{%- elsif item.video -%}
+<div class="project-video">
+    <iframe src="https://www.youtube.com/embed/{{ item.video }}" allowfullscreen></iframe>
+</div>
+{%- elsif item.demo -%}
+<div class="project-video">
+    <video src="{{ site.baseurl }}/{{ item.demo }}" autoplay loop muted playsinline></video>
+</div>
+{%- elsif item.image -%}
+<img src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="{{ item.title }}" class="project-image">
+{%- endif -%}
