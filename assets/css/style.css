@@ -948,6 +948,17 @@ a {
 }
 
 /* === HELLO PAGE === */
+.hello-hero-video {
+    margin-bottom: 48px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.hello-hero-video video {
+    width: 100%;
+    display: block;
+}
+
 .hello-videos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

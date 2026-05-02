@@ -3,3 +3,5 @@ _site/
 .jekyll-metadata
 .claude/
 .sass-cache/
+*.mov
+*.MOV

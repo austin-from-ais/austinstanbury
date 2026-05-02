@@ -38,44 +38,11 @@ permalink: /
         </div>
     </div>
 
-    <div class="hello-videos">
+    <div class="hello-hero-video">
         <video muted autoplay loop playsinline webkit-playsinline preload="metadata">
-            <source src="{{ site.baseurl }}/assets/video/austin1.mp4" type="video/mp4">
-        </video>
-        <video muted autoplay loop playsinline webkit-playsinline preload="metadata">
-            <source src="{{ site.baseurl }}/assets/video/austin2.mp4" type="video/mp4">
-        </video>
-        <video muted autoplay loop playsinline webkit-playsinline preload="metadata">
-            <source src="{{ site.baseurl }}/assets/video/austin3.mp4" type="video/mp4">
+            <source src="{{ site.baseurl }}/assets/video/austinstanbury_um.mp4" type="video/mp4">
         </video>
     </div>
-    <script>
-    (function() {
-        var videos = document.querySelectorAll('.hello-videos video');
-        function tryPlay() {
-            videos.forEach(function(v) {
-                v.muted = true;
-                var p = v.play();
-                if (p !== undefined) {
-                    p.catch(function() {});
-                }
-            });
-        }
-        if (document.readyState === 'complete') {
-            tryPlay();
-        } else {
-            window.addEventListener('load', tryPlay);
-        }
-        document.addEventListener('touchstart', function once() {
-            tryPlay();
-            document.removeEventListener('touchstart', once);
-        });
-        document.addEventListener('scroll', function once() {
-            tryPlay();
-            document.removeEventListener('scroll', once);
-        });
-    })();
-    </script>
 
     <div class="hello-section">
         <h2>featured work</h2>
@@ -105,7 +72,45 @@ permalink: /
                 </a>
             </li>
         </ul>
+        <div class="hello-videos">
+            <video muted autoplay loop playsinline webkit-playsinline preload="metadata">
+                <source src="{{ site.baseurl }}/assets/video/austin1.mp4" type="video/mp4">
+            </video>
+            <video muted autoplay loop playsinline webkit-playsinline preload="metadata">
+                <source src="{{ site.baseurl }}/assets/video/austin2.mp4" type="video/mp4">
+            </video>
+            <video muted autoplay loop playsinline webkit-playsinline preload="metadata">
+                <source src="{{ site.baseurl }}/assets/video/austin3.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
+    <script>
+    (function() {
+        var videos = document.querySelectorAll('.hello-videos video, .hello-hero-video video');
+        function tryPlay() {
+            videos.forEach(function(v) {
+                v.muted = true;
+                var p = v.play();
+                if (p !== undefined) {
+                    p.catch(function() {});
+                }
+            });
+        }
+        if (document.readyState === 'complete') {
+            tryPlay();
+        } else {
+            window.addEventListener('load', tryPlay);
+        }
+        document.addEventListener('touchstart', function once() {
+            tryPlay();
+            document.removeEventListener('touchstart', once);
+        });
+        document.addEventListener('scroll', function once() {
+            tryPlay();
+            document.removeEventListener('scroll', once);
+        });
+    })();
+    </script>
 
     <div class="hello-section">
         <h2>featured news</h2>
