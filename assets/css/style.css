@@ -950,13 +950,26 @@ a {
 /* === HELLO PAGE === */
 .hello-hero-video {
     margin-bottom: 48px;
-    border-radius: 4px;
-    overflow: hidden;
 }
 
 .hello-hero-video video {
     width: 100%;
     display: block;
+    border-radius: 4px;
+}
+
+.hello-hero-credit {
+    font-size: 0.6875rem;
+    color: var(--color-text-light);
+    margin-top: 6px;
+}
+
+.hello-hero-credit a {
+    color: inherit;
+}
+
+.hello-hero-credit a:hover {
+    color: var(--color-accent);
 }
 
 .hello-videos {
