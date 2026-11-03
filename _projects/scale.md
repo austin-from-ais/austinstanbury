@@ -6,6 +6,8 @@ tagline: AI-powered learning in microelectronics through immersive applications
 year: 2025
 date: 2025-01-02
 local_video: assets/video/vpa.mp4
+thumb_video: assets/video/thumbs/vpa.mp4
+poster: vpa.jpg
 image: scale.png
 features:
   - Context-aware GPT-powered pedagogical agent with awareness of student progress, held objects, and learning context
@@ -16,8 +18,8 @@ features:
   - Longitudinal assessment design measuring retention at 24 hours and 6 weeks post-intervention
 tech: Built in Unity 2022.3.40f with XR Interaction Toolkit v3.0.7 and XR Hands v1.4.3 for hand tracking. 3D chip packaging models created in Maya. GPT integration via fine-tuned CustomGPT models trained on domain-specific microelectronics data. Deployed on Meta Quest 3 for MR conditions and WebGL for PC conditions. Voice synthesis through ElevenLabs. Applications available on Meta Store and GitHub.
 links:
-  - label: "CHI '26 Paper: Facilitating Hands-On Learning in Microelectronics Education through Mixed Reality and AI Pedagogical Agents (conditionally accepted)"
-    url: "/austinstanbury/papers/"
+  - label: "CHI '26 Paper: Learning Inside the Chip"
+    url: "https://doi.org/10.1145/3772318.3793705"
 highlights:
   title: "Project Highlights:"
   items:

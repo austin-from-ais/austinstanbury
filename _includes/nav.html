@@ -1,6 +1,12 @@
 <div class="mobile-top-fade"></div>
-<nav class="nav">
-    <button class="hamburger" aria-label="Menu">
+{%- assign work_active = false -%}
+{%- if page.url contains "/work" or page.category == "commercial" %}{% assign work_active = true %}{% endif -%}
+{%- assign art_active = false -%}
+{%- if page.url contains "/art" %}{% assign art_active = true %}{% endif -%}
+{%- assign projects_active = false -%}
+{%- if page.url == "/projects/" or page.category == "hackathon" or page.category == "grad-school" %}{% assign projects_active = true %}{% endif -%}
+<nav class="nav" aria-label="Main">
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -8,8 +14,8 @@
     <ul>
         <li><a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>hello!</a></li>
         <li><a href="{{ site.baseurl }}/news/" {% if page.url == "/news/" %}class="active"{% endif %}>news</a></li>
-        <li class="has-dropdown">
-            <a href="{{ site.baseurl }}/work/" {% if page.url contains "/work" or page.category == "commercial" %}class="active"{% endif %}>work</a><button class="dropdown-toggle">+</button>
+        <li class="has-dropdown{% if work_active %} dropdown-open{% endif %}">
+            <a href="{{ site.baseurl }}/work/" {% if work_active %}class="active"{% endif %}>work</a><button class="dropdown-toggle" aria-label="Toggle work list" aria-expanded="{% if work_active %}true{% else %}false{% endif %}">{% if work_active %}−{% else %}+{% endif %}</button>
             <ul class="dropdown">
                 {% assign commercial = site.projects | where: "category", "commercial" | sort: "date" | reverse %}
                 {% for project in commercial %}
@@ -17,8 +23,8 @@
                 {% endfor %}
             </ul>
         </li>
-        <li class="has-dropdown">
-            <a href="{{ site.baseurl }}/art/" {% if page.url contains "/art" %}class="active"{% endif %}>art</a><button class="dropdown-toggle">+</button>
+        <li class="has-dropdown{% if art_active %} dropdown-open{% endif %}">
+            <a href="{{ site.baseurl }}/art/" {% if art_active %}class="active"{% endif %}>art</a><button class="dropdown-toggle" aria-label="Toggle art list" aria-expanded="{% if art_active %}true{% else %}false{% endif %}">{% if art_active %}−{% else %}+{% endif %}</button>
             <ul class="dropdown">
                 {% assign installations = site.artworks | where: "category", "installations" | sort: "year" | reverse %}
                 {% assign visual = site.artworks | where: "category", "visual-works" | sort: "year" | reverse %}
@@ -51,8 +57,8 @@
                 {% endfor %}
             </ul>
         </li>
-        <li class="has-dropdown">
-            <a href="{{ site.baseurl }}/projects/" {% if page.url == "/projects/" or page.category == "hackathon" or page.category == "grad-school" %}class="active"{% endif %}>projects</a><button class="dropdown-toggle">+</button>
+        <li class="has-dropdown{% if projects_active %} dropdown-open{% endif %}">
+            <a href="{{ site.baseurl }}/projects/" {% if projects_active %}class="active"{% endif %}>projects</a><button class="dropdown-toggle" aria-label="Toggle projects list" aria-expanded="{% if projects_active %}true{% else %}false{% endif %}">{% if projects_active %}−{% else %}+{% endif %}</button>
             <ul class="dropdown">
                 {% assign hackathon = site.projects | where: "category", "hackathon" | sort: "year" | reverse %}
                 {% assign gradschool = site.projects | where: "category", "grad-school" | sort: "date" | reverse %}

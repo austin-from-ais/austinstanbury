@@ -6,6 +6,8 @@ tagline: Location-based AR experiences overlaid onto public murals across Bartow
 year: 2025
 date: 2025-01-01
 local_video: assets/video/bartow.mp4
+thumb_video: assets/video/thumbs/bartow.mp4
+poster: bartow.jpg
 image: bartow.png
 features:
   - Four interactive AR experiences anchored to public mural sites across the city

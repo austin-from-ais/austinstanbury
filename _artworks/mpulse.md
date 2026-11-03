@@ -6,6 +6,8 @@ tagline: Interactive climate installation giving Mesa a voice
 year: 2025
 image: mpulse.png
 demo: assets/video/mpulse.mp4
+thumb_video: assets/video/thumbs/mpulse.mp4
+poster: mpulse.jpg
 award: "ASU Remix Community Impact Award"
 award_line: "ASU Remix Community Impact Award"
 features:

@@ -4,6 +4,7 @@ Usage: {% include media-hero.html item=page %}
 Precedence: videos (carousel) → local_video → video → demo → image
 {%- endcomment -%}
 {%- assign item = include.item -%}
+{%- if item.poster -%}{%- assign poster_attr = ' poster="' | append: site.baseurl | append: '/assets/images/posters/' | append: item.poster | append: '"' -%}{%- else -%}{%- assign poster_attr = '' -%}{%- endif -%}
 {%- if item.videos -%}
 <div class="video-carousel">
     <div class="carousel-viewport">
@@ -21,7 +22,7 @@ Precedence: videos (carousel) → local_video → video → demo → image
 </div>
 {%- elsif item.local_video -%}
 <div class="project-video">
-    <video src="{{ site.baseurl }}/{{ item.local_video }}#t=1" controls playsinline preload="metadata"></video>
+    <video src="{{ site.baseurl }}/{{ item.local_video }}#t=1"{{ poster_attr }} controls playsinline preload="metadata"></video>
 </div>
 {%- elsif item.video -%}
 <div class="project-video">
@@ -29,7 +30,7 @@ Precedence: videos (carousel) → local_video → video → demo → image
 </div>
 {%- elsif item.demo -%}
 <div class="project-video">
-    <video src="{{ site.baseurl }}/{{ item.demo }}" autoplay loop muted playsinline></video>
+    <video src="{{ site.baseurl }}/{{ item.demo }}"{{ poster_attr }} autoplay loop muted playsinline></video>
 </div>
 {%- elsif item.image -%}
 <img src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="{{ item.title }}" class="project-image">

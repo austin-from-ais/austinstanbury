@@ -1,22 +1,28 @@
 {%- comment -%}
 Renders a mosaic-thumb element for a project or artwork.
 Usage: {% include media-thumb.html item=project %}
-Precedence: videos → local_video → demo → thumb → video → image → no-image
+Precedence: videos → thumb_video → local_video → demo → thumb → video → image → no-image
+thumb_video is a small muted loop clip (assets/video/thumbs/); poster is a frame in assets/images/posters/.
 {%- endcomment -%}
 {%- assign item = include.item -%}
+{%- if item.poster -%}{%- assign poster_attr = ' poster="' | append: site.baseurl | append: '/assets/images/posters/' | append: item.poster | append: '"' -%}{%- else -%}{%- assign poster_attr = '' -%}{%- endif -%}
 {%- if item.videos -%}
 <div class="mosaic-thumb mosaic-thumb-cycle">
     {%- for vid in item.videos -%}
     <div class="cycle-frame" style="background-image: url('https://img.youtube.com/vi/{{ vid }}/hqdefault.jpg'); animation-delay: {{ forloop.index0 | times: 3 }}s;"></div>
     {%- endfor -%}
 </div>
+{%- elsif item.thumb_video -%}
+<div class="mosaic-thumb mosaic-thumb-video">
+    <video src="{{ site.baseurl }}/{{ item.thumb_video }}"{{ poster_attr }} muted autoplay loop playsinline preload="metadata"></video>
+</div>
 {%- elsif item.local_video -%}
 <div class="mosaic-thumb mosaic-thumb-video">
-    <video src="{{ site.baseurl }}/{{ item.local_video }}" muted autoplay loop playsinline></video>
+    <video src="{{ site.baseurl }}/{{ item.local_video }}"{{ poster_attr }} muted autoplay loop playsinline preload="metadata"></video>
 </div>
 {%- elsif item.demo -%}
 <div class="mosaic-thumb mosaic-thumb-video">
-    <video src="{{ site.baseurl }}/{{ item.demo }}" muted autoplay loop playsinline></video>
+    <video src="{{ site.baseurl }}/{{ item.demo }}"{{ poster_attr }} muted autoplay loop playsinline preload="metadata"></video>
 </div>
 {%- elsif item.thumb -%}
 <div class="mosaic-thumb" style="background-image: url('{{ site.baseurl }}/assets/images/{{ item.thumb }}')"></div>

@@ -6,6 +6,8 @@ tagline: Immersive climate change narrative using extended reality
 year: 2024
 image: shadowsoftomorrow.png
 demo: assets/video/shadows.mp4
+thumb_video: assets/video/thumbs/shadows.mp4
+poster: shadows.jpg
 video: o6H-NFY4dH0
 award:
   - "MIT Reality Hack Art Grant"
@@ -25,8 +27,6 @@ links:
     url: https://doi.org/10.1145/3611659.3617195
   - label: Gainesville Fine Arts Association
     url: https://www.gainesvillefinearts.org/product-page/shadows-of-tomorrow-ines-said-austin-stanbury
-  - label: AWE XR Challenge Coverage
-    url: https://arpost.co/2023/02/02/150-projects-awe-xr-challenge-climate-change/
   - label: UF Hub Gallery Wall
     url: https://calendar.hr.ufl.edu/event/hub-gallery-wall-artists-reception-networking/
   - label: Parsons Guest Lecture

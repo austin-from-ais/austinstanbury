@@ -1,11 +1,13 @@
 ---
 category: installations
 title: Covid Reflections
-short_title: CovidReflections
+short_title: Covid Reflections
 tagline: AR public health installation with AI body tracking
 year: 2022
 image: covidreflections.png
 demo: assets/video/cr.mp4
+thumb_video: assets/video/thumbs/cr.mp4
+poster: cr.jpg
 video: ectvq_9PRJg
 award: "Arts for UF Vaccine Confidence Program"
 award_line:

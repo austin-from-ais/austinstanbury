@@ -6,6 +6,8 @@ tagline: Can a constrained AI produce authentic art?
 year: 2026
 image: infiniteparticularity.png
 demo: assets/video/particularity-demo.mp4
+thumb_video: assets/video/thumbs/particularity-demo.mp4
+poster: particularity-demo.jpg
 website: https://infiniteparticularity.com
 award: "MIT Reality Hack Art Grant"
 award_line: "MIT Reality Hack Art Grant Recipient 2026"

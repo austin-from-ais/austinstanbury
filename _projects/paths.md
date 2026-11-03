@@ -6,6 +6,8 @@ tagline: NSF-funded semiconductor training program for autistic adults
 year: 2026
 date: 2026-01-03
 local_video: assets/video/paths.mp4
+thumb_video: assets/video/thumbs/paths.mp4
+poster: paths.jpg
 features:
   - 8-week program — in-person workshop at UF, online lectures with VR training, and employment bootcamp
   - Participants receive VR headsets for remote hands-on training developed by AIS
