@@ -1039,8 +1039,7 @@ a {
     font-size: 0.6875rem;
     color: var(--color-text-light);
     line-height: 1.5;
-    max-width: 55ch;
-    margin: -32px 0 48px;
+    max-width: 60ch;
 }
 
 .hello-section {
