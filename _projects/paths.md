@@ -19,7 +19,7 @@ highlights:
   title: "Project Highlights:"
   items:
     - "Funded by the National Science Foundation (Award No. 2346819)"
-    - "AIS collaborated with UF from the program's conception"
+    - "AIS served as technical lead for VR production and collaborated with UF from the program's conception"
     - "Partners include UF Herbert Wertheim College of Engineering, CARD at UF, NHanced, SkyWater, and Lockheed Martin"
     - "Internship stipends up to $10,000 fully covered by UF"
 ---
@@ -28,7 +28,7 @@ PATHS is an NSF-funded 8-week training program designed to prepare autistic indi
 
 **AIS Role**
 
-Augmented Info Systems collaborated with UF from the program's conception, helping launch the initiative and developing the VR training components that give participants hands-on experience with semiconductor processes in an accessible, immersive environment.
+Augmented Info Systems served as technical lead for VR production. AIS collaborated with UF from the program's conception, helping launch the initiative and developing the VR training components that give participants hands-on experience with semiconductor processes in an accessible, immersive environment.
 
 **Program Structure**
 

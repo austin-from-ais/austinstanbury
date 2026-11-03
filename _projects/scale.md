@@ -21,7 +21,8 @@ links:
 highlights:
   title: "Project Highlights:"
   items:
-    - "$450K funded by Department of Defense and National Science Foundation"
+    - "Funded at the University of Florida by DoD ($450,000; PI: Navid Asadi) and NSF Award 2523924 ($682,707; PI: Hyo Jeong Kang)"
+    - "AIS served as technical lead for VR production"
     - "In collaboration with Purdue University and SCALE initiative"
     - "Presented at IEEE PAINE, SCALE-Con in Washington DC, ACM CHI 2025 in Yokohama, and ACM CSCW 2025 in Bergen"
     - "Published at ACM CHI EA 2025, ACM CSCW Companion 2025, and Computers and Education: Artificial Intelligence (2026)"
