@@ -20,7 +20,7 @@ links:
 highlights:
   title: "Project Highlights:"
   items:
-    - "Funded by the National Science Foundation (Award No. 2346819)"
+    - "Funded at the University of Florida by NSF Award 2346819 ($620,104; PI: Hyo Jeong Kang)"
     - "AIS served as technical lead for VR production and collaborated with UF from the program's conception"
     - "Partners include UF Herbert Wertheim College of Engineering, CARD at UF, NHanced, SkyWater, and Lockheed Martin"
     - "Internship stipends up to $10,000 fully covered by UF"
