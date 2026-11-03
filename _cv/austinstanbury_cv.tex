@@ -1,0 +1,221 @@
+\documentclass{resume} % Use the custom resume.cls style
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage[backend=biber, style=ieee, sorting=none]{biblatex}
+\usepackage{url}
+\usepackage{needspace}
+\addbibresource{references.bib}
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Austin Stanbury}
+\address{\href{https://austinstanbury.com}{austinstanbury.com} \\ Fort Lauderdale, Florida}
+\address{Phone: 754-757-4433 \\ Email: \texttt{austin@augmentedinfosystems.com}}
+
+\definecolor{CustomRed}{RGB}{196,18,48}
+
+\renewenvironment{rSection}[1]{
+  \needspace{4\baselineskip}
+  \sectionskip
+  \textcolor{CustomRed}{\MakeUppercase{#1}}
+  \sectionlineskip
+  \hrule
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+  \item[]
+}{
+  \end{list}
+}
+
+\begin{document}
+
+\begin{rSection}{Profile}
+XR researcher, educator, artist, and practitioner working at the intersection of immersive technology, AI, and the arts. Founder of an independent R\&D studio with active university partnerships, serving as technical lead for VR production on federally and institutionally funded XR projects, and a publication record spanning ACM CHI, VRST, and CSCW. Practice combines applied XR for education and health with exhibited creative work investigating synthetic subjectivity and machine creativity.
+\end{rSection}
+
+\begin{rSection}{Education}
+\textbf{University of Florida} \hfill \emph{2019 -- 2022}\\
+MA, Digital Arts and Sciences --- Digital Worlds Institute
+
+\textbf{University of South Florida} \hfill \emph{2015 -- 2019}\\
+BS, Quantitative Economics and Econometrics
+\end{rSection}
+
+\begin{rSection}{Professional Experience}
+\textbf{Augmented Info Systems --- Founder and CEO} \hfill \emph{Oct 2023 -- Present}\\
+Fort Lauderdale, FL --- Independent XR/AR research and development studio operating as an outsourced R\&D lab for university and civic partners.
+\begin{itemize}
+\itemsep -0.5em \vspace{-0.5em}
+\item Technical lead for VR production on the University of Florida's microelectronics education research, funded by the DoD (US Army) SCALE initiative (\$450,000 sub-award via Purdue; PI: Dr.\ Navid Asadi) and NSF Award 2523924 (\$682,707; PI: Dr.\ Hyo Jeong Kang); developed XR training in partnership with the Florida Semiconductor Institute, yielding four peer-reviewed publications at CHI, CHI EA, and CSCW.
+\item Technical lead for VR production on the UF PATHS program for autistic STEM students (NSF Award 2346819; \$620,104; PI: Dr.\ Hyo Jeong Kang), collaborating with UF from the program's conception.
+\item Developed MoodMentor VR vocational and mindfulness training with Road to Responsibility, deployed across two Massachusetts health networks serving thousands of neurodivergent adults.
+\item Delivered three AR historical reconstructions with USF Access 3D Lab and Pinellas County Parks, and four AR mural overlays for the City of Bartow ($\$100{,}000$ municipal contract).
+\item Managed multidisciplinary production teams of up to ten (subject matter experts, software developers, 3D artists) and mentored three interns across a two-year cycle.
+\end{itemize}
+
+\textbf{Florida Semiconductor Institute --- XR Program Coordinator} \hfill \emph{Jun 2026 -- Present}\\
+Gainesville, FL --- Coordinate the institute's extended reality program, spanning VR application development, learning research, and robotics for semiconductor manufacturing.
+\begin{itemize}
+\itemsep -0.5em \vspace{-0.5em}
+\item Develop VR applications for semiconductor workforce training and collaborate with research teams on user studies and peer-reviewed publications, with a focus on agentic AI and immersive pedagogy.
+\item Design routines for humanoid robots supporting semiconductor quality assurance processes, including environment navigation, tool manipulation, and task sequencing in lab settings.
+\end{itemize}
+
+\textbf{University of Florida --- Adjunct Professor} \hfill \emph{Fall 2023; Fall 2026}\\
+Teaching DIG 3873 Game Systems Development 1 and DIG 4540C Production of Immersive
+Environments, undergraduate courses in game programming fundamentals and AR/VR
+prototyping (Fall 2026). Previously designed and taught DIG 6050C Entertainment
+Technology, a graduate VR studio of ten students covering Unity, C\# scripting, and
+integration of 3D art pipelines; culminated in collaborative XR installations
+exhibited with the Florida Museum of Natural History.
+
+\textbf{Guidehouse --- Senior Consultant} \hfill \emph{Oct 2021 -- Oct 2023}\\
+PMO lead on CARES and ARPA-funded Covid-19 recovery for the State of South Carolina, managing workstreams exceeding \$10M. Market lead for the firm's Large Language Models Working Group, advising leadership on enterprise AI adoption and early Microsoft Cognitive Services integration. Member of the Applied Research Cohort, contributing to white papers on smart cities, energy transition, and public-private partnerships.
+
+\textbf{Grant Thornton --- Consultant} \hfill \emph{May 2019 -- Oct 2021}\\
+Lead point of contact for FEMA grants compliance in Southwest Florida, validating projects exceeding \$2M. Internal controls testing for the CMS FY21 cycle.
+\end{rSection}
+
+\begin{rSection}{Teaching}
+\textbf{University of Florida, Digital Worlds Institute} \\
+DIG 3873 --- Game Systems Development 1 (undergraduate) \hfill \emph{Fall 2026}\\
+DIG 4540C --- Production of Immersive Environments (undergraduate) \hfill \emph{Fall 2026}\\
+DIG 6050C --- Entertainment Technology (graduate) \hfill \emph{Fall 2023}
+
+\vspace{0.4em}
+\textbf{Guest Lectures and Invited Critiques}\\
+University of Miami, Department of Interactive Media --- Industry Panel \hfill \emph{2026}\\
+University of Miami, School of Communication --- AI in Creative Workflows \hfill \emph{2026}\\
+Parsons School of Design --- Designing Immersive XR Installations with AI \hfill \emph{2025}
+\end{rSection}
+
+\begin{rSection}{Funded Projects}
+\emph{Amounts are the total size of each award. Unless a role is stated otherwise, the award is held by the partner institution and my role was technical lead for VR production through Augmented Info Systems (AIS). AIS has not been the recipient, PI, or co-PI on any of these awards.}
+
+\vspace{0.4em}
+\textbf{Adaptive Contextual Learning in Microelectronics through Immersive Virtual Reality} (NSF Award 2523924) \hfill \emph{2025 -- 2028}\\
+University of Florida, \$682,707\\
+PI: Dr.\ Hyo Jeong Kang; Co-PIs: Dr.\ Pavlo Antonenko, Dr.\ Navid Asadi. Role: Technical Lead for VR Production via AIS.\\
+Virtual Pedagogical Agents: Mixed Reality and AI platform for microelectronics education, with a GPT-powered context-aware tutor; published at CHI, CHI EA, CSCW, and in Computers and Education: AI.
+
+\textbf{SCALE: Microelectronics Workforce Development} (DoD / US Army) \hfill \emph{2024 -- Present}\\
+Sub-award via Purdue to University of Florida, \$450,000\\
+PI: Dr.\ Navid Asadi; UF Co-PI: Dr.\ Hyo Jeong Kang. Role: Technical Lead for VR Production via AIS.\\
+XR training software developed with the Florida Semiconductor Institute under the SCALE initiative.
+
+\textbf{PATHS: Preparing Autistic Individuals for Transition to Quality Assurance Engineering in Semiconductors} (NSF Award 2346819) \hfill \emph{2024 -- 2027}\\
+University of Florida, \$620,104\\
+PI: Dr.\ Hyo Jeong Kang; Co-PIs: Dr.\ Navid Asadi, Dr.\ Nigel Newbutt, Dr.\ Ann-Marie Orlando. Role: Technical Lead for VR Production via AIS; collaborator from program conception.\\
+Eight-week semiconductor training program for autistic adults combining VR hands-on training, in-person lab experience at UF, and industry mentorship.
+
+\textbf{City of Bartow AR Murals} \hfill \emph{2025 -- Present}\\
+Partners: USF Access 3D Lab, City of Bartow, \$100,000\\
+Augmented reality overlays for public murals supporting civic identity and tourism through university-city collaboration.
+
+\textbf{MoodMentor: VR Tools for Neurodivergence} \hfill \emph{2024}\\
+Partners: Road to Responsibility, South Shore Support Services, \$60,000\\
+Faculty collaborators: UF Digital Worlds, UF Institute for Advanced Learning Technologies (ELTL).\\
+Immersive vocational and emotional skill-building tools deployed across clinical networks.
+
+\textbf{Fort De Soto AR Reconstruction} \hfill \emph{2024}\\
+Partners: USF Access 3D Lab, Fort De Soto Park Management.\\
+Site-specific AR reconstructions of historic fortifications for public heritage interpretation.
+
+\textbf{Covid Reflections: AR Installation for Public Health Communication} \hfill \emph{2022}\\
+Funder: Arts for UF Vaccine Confidence, Center for Arts in Medicine, est. \$10,000. Role: Lead Artist and Developer (as a UF graduate student).\\
+Immersive AR installation on COVID-19 transmission using AI-driven LiDAR body tracking; published in ACM VRST.
+
+\textbf{HoloKeys: AR for Music Education} \hfill \emph{2022}\\
+Funder: UF College of the Arts Strategic Opportunity Fund, \$5,000. Role: Principal Investigator (as a UF graduate student).\\
+Remote piano teaching interface combining augmented reality with IoT components; published in ACM VRST.
+\end{rSection}
+
+\begin{rSection}{Peer-Reviewed Publications}
+Cheon, S., \textbf{Stanbury, A.}, Arjunamahanthi, P., Kottur, H., \& Kang, H. (2026). \textit{Learning Inside the Chip: A Design-Science Approach to Developing MR Lab and an AI Agent for Conceptual, Procedural, and Spatial Understanding in Microelectronics Education}. Proceedings of the CHI Conference on Human Factors in Computing Systems (CHI '26). \url{https://doi.org/10.1145/3772318.3793705}
+
+Liu, Z., Cheon, S., \textbf{Stanbury, A.}, Jiao, X., Xing, W., \& Kang, H. (2025). \textit{Towards contextual-based AI: A scoping review of artificial intelligence in X reality for personalized learning}. Computers and Education: Artificial Intelligence, 100523. \url{https://doi.org/10.1016/j.caeai.2025.100523}
+
+Cheon, S., \textbf{Stanbury, A.}, Lam, J. F., Xu, K., \& Kang, H. (2025). \textit{Virtual Tutors for Science Labs: Exploring the Impact of GPT Integration and 3D Tutor Avatars on Student Engagement and Learning Outcomes}. Companion Publication of the 2025 Conference on Computer-Supported Cooperative Work and Social Computing (CSCW Companion '25). \url{https://doi.org/10.1145/3715070.3749276}
+
+Arjunamahanthi, P., Kottur, H. R., \textbf{Stanbury, A.}, Lam, J. F., Cheon, S., Asadizanjani, N., \& Kang, H. (2025). \textit{Interactive Learning in Microelectronics Education: Comparing PC and Mixed Reality Approaches for Student Engagement and Visual-Spatial Memory}. Proceedings of the Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA '25). \url{https://doi.org/10.1145/3706599.3721269}
+
+\textbf{Stanbury, A. J.}, \& Said, I. (2024). \textit{MoodMentor: Virtual Reality UI/UX Design Considerations for Neurodivergent Users}. Peer-reviewed tutorial, IEEE Conference on Games, Entertainment, and Media (GEM 2024), Politecnico di Torino, Italy.
+
+Said, I., \textbf{Stanbury, A. J.}, Delhagen, E., \& Kang, H. (2023). \textit{Immersive Climate Narratives: Using Extended Reality to Raise Climate Change Awareness}. Proceedings of the 29th ACM Symposium on Virtual Reality Software and Technology (VRST '23), Christchurch, New Zealand. \url{https://doi.org/10.1145/3611659.3617195}
+
+Said, I., \textbf{Stanbury, A. J.}, Delhagen, E., \& Winger-Bearskin, A. (2022). \textit{Covid Reflections: AR in Public Health Communications}. Proceedings of the 28th ACM Symposium on Virtual Reality Software and Technology (VRST '22), Tsukuba, Japan. \url{https://doi.org/10.1145/3562939.3565666}
+
+\textbf{Stanbury, A. J.}, Said, I., \& Kang, H. (2021). \textit{HoloKeys: Interactive Piano Education Using Augmented Reality and IoT}. Proceedings of the 27th ACM Symposium on Virtual Reality Software and Technology (VRST '21), Osaka, Japan. \url{https://doi.org/10.1145/3489849.3489921}
+
+Gowthaman, A., Kirova, L., Li, B., Molen, P., Said, I., Smith, J., \textbf{Stanbury, A.}, Santoso, M., \& Sukotjo, C. (2021). \textit{Immersive Learning with AI-enhanced Virtual Standardized Patient (VSP) to Improve Dental Student's Communication Proficiencies}. ACHI 2021: Fourteenth International Conference on Advances in Computer-Human Interactions.
+\end{rSection}
+
+\begin{rSection}{Exhibitions and Creative Work}
+\textbf{NYCxDesign Becoming Festival} --- MPulse, Artech Space, NYC \hfill \emph{2026}\\
+\textbf{MIT Reality Hack} --- \textit{Infinite Particularity}, Art Grant Recipient \hfill \emph{2026}\\
+\textbf{Tech for Change: ReMix the Future} --- MPulse, ASU MIX Center \hfill \emph{2025}\\
+\textbf{Connect Record Shop} --- \textit{Miracle} (permanent installation) \hfill \emph{2025}\\
+\textbf{MIT Reality Hack} --- \textit{Shadows of Tomorrow}, Art Grant Recipient \hfill \emph{2025}\\
+\textbf{HEAT} --- GFAA Biennial \hfill \emph{2024}\\
+\textbf{Abstract Mind} --- Czong Institute \hfill \emph{2023}\\
+\textbf{All Florida Exhibition} --- Alliance for the Arts \hfill \emph{2023}\\
+\textbf{Inclusion} --- GFAA \hfill \emph{2023}\\
+\textbf{In The Machine} --- 4Most Gallery \hfill \emph{2022}
+\end{rSection}
+
+\begin{rSection}{Awards and Recognition}
+Community Impact Award, ASU Tech for Change: ReMix the Future \hfill \emph{2025}\\
+Award of Excellence, City of Miami + Gainesville Fine Arts Association \hfill \emph{2024}\\
+Semi-finalist, AWE XR Climate Challenge \hfill \emph{2023}\\
+Director's Award, UF Digital Worlds \hfill \emph{2022}
+
+\vspace{0.4em}
+\textbf{Hackathon Wins} \hfill \emph{2020--2021}\\
+HackaTown / Polytechnique Montr\'eal, HackGT (IBM Challenge), VandyHacks (Google Cloud, Hardware), KnightHacks, ShellHacks, HackViolet (Est\'ee Lauder)
+\end{rSection}
+
+\begin{rSection}{Invited Talks}
+``Interactive Media Industry Panel'' --- University of Miami, Dept.\ of Interactive Media \hfill \emph{2026}\\
+``Infinite Particularity and Machine Creativity'' (Lightning Talk) --- MiamiXR \hfill \emph{2026}\\
+``Using AI in Creative Workflows'' --- University of Miami, School of Communication \hfill \emph{2026}\\
+``Designing Immersive XR Installations with AI'' --- Parsons School of Design \hfill \emph{2025}\\
+Business of the Arts Podcast --- University of Florida, College of the Arts \hfill \emph{2025}\\
+The Glow Up Podcast --- Interview with Nathan Bowser \hfill \emph{2024}\\
+``Designing Outdoor Environments in Unity'' --- UF Intelligent Cultivation of Urban Ecosystems \hfill \emph{2023}\\
+``AR in Public Health Awareness'' --- Global XR Conference \hfill \emph{2022}\\
+``Spatial Computing and the Future of Reality'' --- Institute for Learning in Retirement \hfill \emph{2022}\\
+``Playful Resilience'' (Panelist) --- Games for Change Festival \hfill \emph{2022}\\
+``Faster Iteration in AR Using Unity'' --- Augmented World Expo (AWE) \hfill \emph{2022}\\
+``AR in Public Health Communication'' --- AI + Society Symposium, UF \hfill \emph{2022}\\
+``Environment Design in Unity'' --- National Public Lands Day, UF / National Park Service \hfill \emph{2021}
+
+\vspace{0.4em}
+\textbf{Industry Demos:} XR Training Demo, SCALE-Con (Washington, DC, 2026); IEEE PAINE, NASA Marshall Space Flight Center (Huntsville, AL, 2024).
+\end{rSection}
+
+\begin{rSection}{Professional Service}
+\textbf{HarvardXR} --- Organizer \hfill \emph{2025 -- Present}\\
+Coordinate events and programming for Harvard's extended reality community.
+
+\textbf{MIT Reality Hack} --- Experiential Innovation Conference Volunteer \hfill \emph{2026}
+
+\textbf{Heavener International Case Competition (HICC)} --- Case Sponsor and Judge \hfill \emph{2025}\\
+Authored strategic business challenge for international undergraduate teams at the UF Warrington College of Business; served on evaluating panel.
+\end{rSection}
+
+\begin{rSection}{Technical Skills}
+\textbf{XR Production:} Unity, Niantic Lightship SDK, ARCore, ARKit, Meta XR SDK, Meta Quest, HoloLens, Blender, LiDAR scanning\\
+\textbf{Programming:} C\#, Python, Kotlin, JavaScript, SQL\\
+\textbf{Mobile / Backend:} Android Studio, Hilt, Room, Firebase, Git\\
+\textbf{Hardware / IoT:} Arduino, Raspberry Pi, sensor integration\\
+\textbf{Design:} Adobe Creative Suite\\
+\textbf{Research Methods:} Econometrics, statistical analysis, qualitative methods
+\end{rSection}
+
+\begin{rSection}{Languages}
+English (native) \textbullet{} French (fluent) \textbullet{} Tunisian Arabic (proficient, ten years regular travel in Tunisia) \textbullet{} Spanish (beginner)
+\end{rSection}
+
+\end{document}
